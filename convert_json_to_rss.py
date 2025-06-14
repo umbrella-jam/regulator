@@ -17,4 +17,4 @@ for item in items:
     fe.description(item["summary"])
     fe.pubDate(datetime.fromisoformat(item["pubDate"]))
 
-fg.rss_file("public/rss.xml")
+fg.rss_file("docs/rss.xml")
