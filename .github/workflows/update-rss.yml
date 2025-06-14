@@ -26,7 +26,6 @@ jobs:
       - name: Convert to RSS
         run: python convert_json_to_rss.py
 
-
       - name: Commit and push updated RSS
         run: |
           git config --global user.name "github-actions"
