@@ -26,10 +26,12 @@ jobs:
       - name: Convert to RSS
         run: python convert_json_to_rss.py
 
-      - name: Commit and push updated RSS
+      - name: Commit and push updated feed
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "actions@github.com"
-          git add public/rss.xml
-          git commit -m "Update RSS feed"
-          git push
+          git add public/data.json public/rss.xml
+          git commit -m "Update RSS feed" || echo "Nothing to commit"
+          git push https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }} HEAD:${{ github.ref_name }}

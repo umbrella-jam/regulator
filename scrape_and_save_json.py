@@ -1,5 +1,5 @@
 import json
-from datetime import datetime
+from datetime import datetime, timezone
 
 # Example scraped data
 data = [
@@ -7,7 +7,7 @@ data = [
         "title": "Example Article",
         "link": "https://example.com/article",
         "summary": "This is a summary.",
-        "pubDate": datetime.now().isoformat()
+        "pubDate": datetime.now(timezone.utc).isoformat()
     }
 ]
 
