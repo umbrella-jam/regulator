@@ -7,7 +7,7 @@ data = [
         "title": "Example Article",
         "link": "https://example.com/article",
         "summary": "This is a summary.",
-        "pubDate": datetime.now().isoformat()
+        "pubDate": datetime.now(timezone.utc).isoformat()
     }
 ]
 
