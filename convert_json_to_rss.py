@@ -2,7 +2,7 @@ from feedgen.feed import FeedGenerator
 import json
 from datetime import datetime
 
-with open("public/data.json") as f:
+with open("docs/data.json") as f:
     items = json.load(f)
 
 fg = FeedGenerator()
