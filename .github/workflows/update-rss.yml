@@ -20,8 +20,12 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Run scraper and generate RSS
-        run: python scrape_and_generate_rss.py
+      - name: Run scraper
+        run: python scrape_and_save_json.py
+      
+      - name: Convert to RSS
+        run: python convert_json_to_rss.py
+
 
       - name: Commit and push updated RSS
         run: |
