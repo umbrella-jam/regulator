@@ -16,15 +16,31 @@
     user-select: none;
   }
   tr:nth-child(even) { background: #fafafa; }
-  #searchBox { width: 300px; padding: 8px; font-size: 14px; }
+  #searchBox, #sourceFilter { width: 200px; padding: 8px; font-size: 14px; margin-right: 10px; }
   .sort-indicator { margin-left: 6px; font-size: 12px; opacity: 0.6; }
+  /* Make Publication Date column wider */
+  #newsTable th:nth-child(2),
+  #newsTable td:nth-child(2) {
+    width: 200px; /* adjust as needed */
+    max-width: 250px; /* optional */
+  }
+  /* Make Source column wider */
+  #newsTable th:nth-child(3),
+  #newsTable td:nth-child(3) {
+    width: 50px; /* adjust as needed */
+    max-width: 200px; /* optional to prevent overflow */
+    white-space: nowrap; /* keep content on one line */
+}
 </style>
 </head>
 <body>
 
 <h2>News Feed</h2>
 
-<input id="searchBox" type="text" placeholder="Search..." onkeyup="applyFilters()" />
+<input id="searchBox" type="text" placeholder="Search by title..." onkeyup="applyFilters()" />
+<select id="sourceFilter" onchange="applyFilters()">
+  <option value="">All Sources</option>
+</select>
 
 <table id="newsTable"></table>
 
@@ -35,15 +51,23 @@ let jsonData = [];
 let filteredData = [];
 let sortState = {}; // ascending/descending tracking
 
-// Convert timestamp → readable date
+// Convert timestamp → readable date (date only)
 function prettyDate(dateStr) {
   const d = new Date(dateStr);
-  return d.toLocaleString(undefined, {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-    hour: "2-digit",
-    minute: "2-digit"
+  return d.toLocaleDateString(undefined, { year: "numeric", month: "long", day: "numeric" });
+}
+
+
+
+// Populate source dropdown dynamically
+function populateSourceFilter() {
+  const select = document.getElementById("sourceFilter");
+  const sources = [...new Set(jsonData.map(row => row.source))];
+  sources.forEach(src => {
+    const opt = document.createElement("option");
+    opt.value = src;
+    opt.textContent = src;
+    select.appendChild(opt);
   });
 }
 
@@ -60,6 +84,9 @@ function buildTable() {
         <th onclick="sortTable('pubDate')">
           Publication Date ${sortState.pubDate ? (sortState.pubDate === 'asc' ? '▲' : '▼') : ''}
         </th>
+        <th onclick="sortTable('source')">
+          Source ${sortState.source ? (sortState.source === 'asc' ? '▲' : '▼') : ''}
+        </th>
       </tr>
     </thead>
     <tbody>
@@ -70,6 +97,7 @@ function buildTable() {
       <tr>
         <td><a href="${row.link}" target="_blank">${row.title}</a></td>
         <td>${prettyDate(row.pubDate)}</td>
+        <td>${row.source}</td>
       </tr>`;
   });
 
@@ -77,16 +105,17 @@ function buildTable() {
   table.innerHTML = html;
 }
 
-// Apply search + sorting
+// Apply search + source filter + sorting
 function applyFilters() {
   const text = document.getElementById("searchBox").value.toLowerCase();
+  const source = document.getElementById("sourceFilter").value;
 
-  // Filter first
-  filteredData = jsonData.filter(row =>
-    row.title.toLowerCase().includes(text)
+  filteredData = jsonData.filter(row => 
+    row.title.toLowerCase().includes(text) &&
+    (source === "" || row.source === source)
   );
 
-  // Then reapply sort to maintain persistence
+  // Reapply sort to maintain persistence
   if (sortState.activeColumn) {
     sortTable(sortState.activeColumn, true); // internal sort
   } else {
@@ -96,7 +125,6 @@ function applyFilters() {
 
 // Sort (with support for internal re-sorting)
 function sortTable(column, internal = false) {
-  // Toggle direction only if the user clicked
   if (!internal) {
     sortState[column] = sortState[column] === "asc" ? "desc" : "asc";
     sortState.activeColumn = column;
@@ -126,7 +154,8 @@ fetch(DATA_URL)
   .then(res => res.json())
   .then(data => {
     jsonData = data;
-    filteredData = [...data]; // initial
+    filteredData = [...data];
+    populateSourceFilter();
     buildTable();
   })
   .catch(err => {
