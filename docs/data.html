@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Dynamic News Table</title>
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 25px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+  }
+
+  th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    vertical-align: top;
+  }
+
+  th {
+    background: #f2f2f2;
+    text-align: center; /* Center header text */
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  tr:nth-child(even) {
+    background: #fafafa;
+  }
+
+  #searchBox {
+    width: 300px;
+    padding: 8px;
+    font-size: 14px;
+  }
+</style>
+</head>
+<body>
+
+<h2>News Feed</h2>
+
+<input id="searchBox" type="text" placeholder="Search..." onkeyup="filterTable()" />
+
+<table id="newsTable"></table>
+
+<script>
+const DATA_URL = "https://raw.githubusercontent.com/umbrella-jam/regulator/refs/heads/main/docs/data.json";
+
+let jsonData = [];   // will be populated from fetch()
+
+// Human-readable date formatter
+function prettyDate(dateStr) {
+  const d = new Date(dateStr);
+  return d.toLocaleString(undefined, {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    hour: "2-digit",
+    minute: "2-digit"
+  });
+}
+
+// Build the table HTML
+function buildTable(data) {
+  const table = document.getElementById("newsTable");
+
+  if (!data.length) {
+    table.innerHTML = "<tr><td>No data</td></tr>";
+    return;
+  }
+
+  const headers = Object.keys(data[0]);
+
+  let html = "<thead><tr>";
+  for (let h of headers) {
+    html += `<th onclick="sortTable('${h}')">${h}</th>`;
+  }
+  html += "</tr></thead><tbody>";
+
+  for (let row of data) {
+    html += "<tr>";
+    for (let h of headers) {
+      let cell = row[h];
+
+      if (h === "link") {
+        cell = `<a href="${cell}" target="_blank">Link</a>`;
+      }
+
+      if (h === "pubDate") {
+        cell = prettyDate(cell);
+      }
+
+      html += `<td>${cell}</td>`;
+    }
+    html += "</tr>";
+  }
+
+  html += "</tbody>";
+  table.innerHTML = html;
+}
+
+// Column sorting
+function sortTable(column) {
+  jsonData.sort((a, b) => {
+    if (a[column] < b[column]) return -1;
+    if (a[column] > b[column]) return 1;
+    return 0;
+  });
+  buildTable(jsonData);
+}
+
+// Searching / Filtering
+function filterTable() {
+  const text = document.getElementById("searchBox").value.toLowerCase();
+  const filtered = jsonData.filter(row =>
+    Object.values(row).some(v => String(v).toLowerCase().includes(text))
+  );
+  buildTable(filtered);
+}
+
+// Fetch data from GitHub
+fetch(DATA_URL)
+  .then(response => response.json())
+  .then(data => {
+    jsonData = data;
+    buildTable(jsonData);
+  })
+  .catch(err => {
+    console.error("Error fetching JSON:", err);
+    document.getElementById("newsTable").innerHTML = "<tr><td>Error loading data</td></tr>";
+  });
+
+</script>
+
+</body>
+</html>
