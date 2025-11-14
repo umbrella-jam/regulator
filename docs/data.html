@@ -2,58 +2,40 @@
 <html>
 <head>
 <meta charset="UTF-8" />
-<title>News Releases</title>
+<title>News Table</title>
 
 <style>
-  body {
-    font-family: Arial, sans-serif;
-    margin: 25px;
+  body { font-family: Arial, sans-serif; margin: 25px; }
+  table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+  th, td { padding: 10px; border: 1px solid #ddd; vertical-align: top; }
+  th { 
+    background: #f2f2f2; 
+    text-align: center; 
+    cursor: pointer; 
+    font-weight: bold; 
+    user-select: none;
   }
-
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 15px;
-  }
-
-  th, td {
-    padding: 10px;
-    border: 1px solid #ddd;
-    vertical-align: top;
-  }
-
-  th {
-    background: #f2f2f2;
-    text-align: center; /* Center header text */
-    cursor: pointer;
-    font-weight: bold;
-  }
-
-  tr:nth-child(even) {
-    background: #fafafa;
-  }
-
-  #searchBox {
-    width: 300px;
-    padding: 8px;
-    font-size: 14px;
-  }
+  tr:nth-child(even) { background: #fafafa; }
+  #searchBox { width: 300px; padding: 8px; font-size: 14px; }
+  .sort-indicator { margin-left: 6px; font-size: 12px; opacity: 0.6; }
 </style>
 </head>
 <body>
 
 <h2>News Feed</h2>
 
-<input id="searchBox" type="text" placeholder="Search..." onkeyup="filterTable()" />
+<input id="searchBox" type="text" placeholder="Search..." onkeyup="applyFilters()" />
 
 <table id="newsTable"></table>
 
 <script>
 const DATA_URL = "https://raw.githubusercontent.com/umbrella-jam/regulator/refs/heads/main/docs/data.json";
 
-let jsonData = [];   // will be populated from fetch()
+let jsonData = [];
+let filteredData = [];
+let sortState = {}; // ascending/descending tracking
 
-// Human-readable date formatter
+// Convert timestamp → readable date
 function prettyDate(dateStr) {
   const d = new Date(dateStr);
   return d.toLocaleString(undefined, {
@@ -65,76 +47,92 @@ function prettyDate(dateStr) {
   });
 }
 
-// Build the table HTML
-function buildTable(data) {
+// Render table using *filteredData*
+function buildTable() {
   const table = document.getElementById("newsTable");
 
-  if (!data.length) {
-    table.innerHTML = "<tr><td>No data</td></tr>";
-    return;
-  }
+  let html = `
+    <thead>
+      <tr>
+        <th onclick="sortTable('title')">
+          Title ${sortState.title ? (sortState.title === 'asc' ? '▲' : '▼') : ''}
+        </th>
+        <th onclick="sortTable('pubDate')">
+          Publication Date ${sortState.pubDate ? (sortState.pubDate === 'asc' ? '▲' : '▼') : ''}
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+  `;
 
-  const headers = Object.keys(data[0]);
-
-  let html = "<thead><tr>";
-  for (let h of headers) {
-    html += `<th onclick="sortTable('${h}')">${h}</th>`;
-  }
-  html += "</tr></thead><tbody>";
-
-  for (let row of data) {
-    html += "<tr>";
-    for (let h of headers) {
-      let cell = row[h];
-
-      if (h === "link") {
-        cell = `<a href="${cell}" target="_blank">Link</a>`;
-      }
-
-      if (h === "pubDate") {
-        cell = prettyDate(cell);
-      }
-
-      html += `<td>${cell}</td>`;
-    }
-    html += "</tr>";
-  }
+  filteredData.forEach(row => {
+    html += `
+      <tr>
+        <td><a href="${row.link}" target="_blank">${row.title}</a></td>
+        <td>${prettyDate(row.pubDate)}</td>
+      </tr>`;
+  });
 
   html += "</tbody>";
   table.innerHTML = html;
 }
 
-// Column sorting
-function sortTable(column) {
-  jsonData.sort((a, b) => {
-    if (a[column] < b[column]) return -1;
-    if (a[column] > b[column]) return 1;
-    return 0;
-  });
-  buildTable(jsonData);
-}
-
-// Searching / Filtering
-function filterTable() {
+// Apply search + sorting
+function applyFilters() {
   const text = document.getElementById("searchBox").value.toLowerCase();
-  const filtered = jsonData.filter(row =>
-    Object.values(row).some(v => String(v).toLowerCase().includes(text))
+
+  // Filter first
+  filteredData = jsonData.filter(row =>
+    row.title.toLowerCase().includes(text)
   );
-  buildTable(filtered);
+
+  // Then reapply sort to maintain persistence
+  if (sortState.activeColumn) {
+    sortTable(sortState.activeColumn, true); // internal sort
+  } else {
+    buildTable();
+  }
 }
 
-// Fetch data from GitHub
+// Sort (with support for internal re-sorting)
+function sortTable(column, internal = false) {
+  // Toggle direction only if the user clicked
+  if (!internal) {
+    sortState[column] = sortState[column] === "asc" ? "desc" : "asc";
+    sortState.activeColumn = column;
+  }
+
+  const direction = sortState[column] || "asc";
+
+  filteredData.sort((a, b) => {
+    let valA = a[column];
+    let valB = b[column];
+
+    if (column === "pubDate") {
+      valA = new Date(valA);
+      valB = new Date(valB);
+    }
+
+    return direction === "asc"
+      ? (valA > valB ? 1 : -1)
+      : (valA < valB ? 1 : -1);
+  });
+
+  buildTable();
+}
+
+// Fetch JSON
 fetch(DATA_URL)
-  .then(response => response.json())
+  .then(res => res.json())
   .then(data => {
     jsonData = data;
-    buildTable(jsonData);
+    filteredData = [...data]; // initial
+    buildTable();
   })
   .catch(err => {
-    console.error("Error fetching JSON:", err);
     document.getElementById("newsTable").innerHTML = "<tr><td>Error loading data</td></tr>";
+    console.error(err);
   });
-
 </script>
 
 </body>
