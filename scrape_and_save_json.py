@@ -107,7 +107,7 @@ def crawl_doj(existing_links):
 # -----------------------------
 # SEC Crawler
 # -----------------------------
-def crawl_sec(existing_links, max_pages=150):
+def crawl_sec(existing_links, max_pages=10):
     headers_SEC = {
         "User-Agent": "Individual Marion<marion.umbel@gmail.com>",
         "Accept": "gzip, deflate",
@@ -118,7 +118,7 @@ def crawl_sec(existing_links, max_pages=150):
 
     results = []
     for page in range(max_pages):
-        url = SEC_PAGE_URL.format(page+50)
+        url = SEC_PAGE_URL.format(page)
         print(f"SEC Page {page}: {url}")
 
         try:
