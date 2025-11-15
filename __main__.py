@@ -149,8 +149,7 @@ if __name__ == "__main__":
 
     # Add RSS feeds
     scraper.add_rss_source("https://www.justice.gov/news/rss?m=1", "DOJ")
-    # scraper.add_rss_source("https://feeds.bbci.co.uk/news/world/rss.xml", "BBC World")
-    
+        
     # Add web sources (example)
     # scraper.add_web_source("https://example-news-site.com", example_news_site_parser, "Example News")
 

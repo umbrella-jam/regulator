@@ -3,33 +3,58 @@
 <head>
 <meta charset="UTF-8" />
 <title>News Table</title>
-
 <style>
   body { font-family: Arial, sans-serif; margin: 25px; }
   table { width: 100%; border-collapse: collapse; margin-top: 15px; }
   th, td { padding: 10px; border: 1px solid #ddd; vertical-align: top; }
-  th { 
-    background: #f2f2f2; 
-    text-align: center; 
-    cursor: pointer; 
-    font-weight: bold; 
-    user-select: none;
-  }
+  th { background: #f2f2f2; text-align: center; cursor: pointer; font-weight: bold; user-select: none; }
   tr:nth-child(even) { background: #fafafa; }
+
   #controls {
     display: flex;
     gap: 10px;
     align-items: center;
     margin-bottom: 15px;
+    flex-wrap: wrap;
   }
   #controls input, #controls select, #controls button {
     padding: 8px 12px;
     font-size: 14px;
     height: 36px;
   }
+
   .summary { display: none; margin-top: 5px; font-size: 14px; color: #333; }
+
   #newsTable th:nth-child(2), #newsTable td:nth-child(2) { width: 200px; max-width: 250px; }
   #newsTable th:nth-child(3), #newsTable td:nth-child(3) { width: 50px; max-width: 200px; white-space: nowrap; }
+
+  /* Floating back-to-top button */
+  #backToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    padding: 12px 16px;
+    font-size: 14px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  }
+
+  /* Mobile styles */
+  @media screen and (max-width: 700px) {
+    table, thead, tbody, th, td, tr { display: block; width: 100%; }
+    th { display: none; }
+    td { border: none; padding: 10px 0; }
+    td a { font-weight: bold; font-size: 16px; display: block; margin-bottom: 5px; }
+    td .mobile-info { display: none; font-size: 14px; color: #333; margin-bottom: 10px; }
+    td .summary { display: none; }
+  }
+
 </style>
 </head>
 <body>
@@ -45,6 +70,8 @@
 </div>
 
 <table id="newsTable"></table>
+
+<button id="backToTopBtn" onclick="scrollToTop()">↑</button>
 
 <script>
 const DATA_URL = "https://umbrella-jam.github.io/regulator/data.json";
@@ -77,6 +104,9 @@ function toggleAllSummaries() {
   filteredData.forEach((_, index) => {
     const summaryEl = document.getElementById(`summary-${index}`);
     if (summaryEl) summaryEl.style.display = allVisible ? "block" : "none";
+
+    const mobileEl = document.getElementById(`mobile-${index}`);
+    if (mobileEl) mobileEl.style.display = allVisible ? "block" : "none";
   });
 }
 
@@ -102,8 +132,12 @@ function buildTable() {
     html += `
       <tr>
         <td>
-          <a href="${row.link}" target="_blank">${row.title}</a><br>
+          <a href="${row.link}" target="_blank">${row.title}</a>
           <div class="summary" id="summary-${index}" style="display:${allVisible ? 'block' : 'none'};">${row.summary}</div>
+          <div class="mobile-info" id="mobile-${index}" style="display:${allVisible ? 'block' : 'none'};">
+            <div><strong>Date:</strong> ${prettyDate(row.pubDate)}</div>
+            <div><strong>Summary:</strong> ${row.summary}</div>
+          </div>
         </td>
         <td>${prettyDate(row.pubDate)}</td>
         <td>${row.source}</td>
@@ -150,6 +184,14 @@ function sortTable(column, internal = false) {
 
   buildTable();
 }
+
+// Back to top button
+window.onscroll = function() { toggleBackToTop() };
+function toggleBackToTop() {
+  const btn = document.getElementById("backToTopBtn");
+  btn.style.display = (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) ? "block" : "none";
+}
+function scrollToTop() { window.scrollTo({top:0, behavior:'smooth'}); }
 
 // Event listeners
 document.getElementById("searchBox").addEventListener("input", debounceSearch);
