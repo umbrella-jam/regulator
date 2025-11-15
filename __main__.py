@@ -169,8 +169,8 @@ if __name__ == "__main__":
     # scraper.add_rss_source("https://www.justice.gov/news/rss?type=image_gallery&m=1", "DOJ Image")
     scraper.add_rss_source("https://www.justice.gov/news/rss?type=press_release&m=1", "DOJ Press Release")
     scraper.add_rss_source("https://www.justice.gov/news/rss?type=speech&m=1", "DOJ Speech")
-    scraper.add_rss_source("https://www.sec.gov/enforcement-litigation/litigation-releases/rss", "SEC Litigation Releases")
-    scraper.add_rss_source("https://www.sec.gov/enforcement-litigation/administrative-proceedings/rss", "SEC Administrative Proceedings")
+    scraper.add_rss_source("https://www.sec.gov/enforcement-litigation/litigation-releases/rss", "SEC Litigation")
+    scraper.add_rss_source("https://www.sec.gov/enforcement-litigation/administrative-proceedings/rss", "SEC Admin Proceedings")
 
         
     # Add web sources (example)
