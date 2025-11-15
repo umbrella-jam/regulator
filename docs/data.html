@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>News Feed</title>
+<style>
+  body { font-family: Arial, sans-serif; margin: 25px; }
+  h2 { margin-bottom: 10px; }
+  table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+  th, td { padding: 10px; border: 1px solid #ddd; vertical-align: top; }
+  th { 
+    background: #f2f2f2; 
+    text-align: left; 
+    cursor: pointer; 
+    font-weight: bold; 
+    user-select: none;
+  }
+  tr:nth-child(even) { background: #fafafa; }
+  #searchBox, #sourceFilter { width: 200px; padding: 8px; font-size: 14px; margin-right: 10px; }
+  .sort-indicator { margin-left: 6px; font-size: 12px; opacity: 0.6; }
+
+  /* Wider Publication Date & Source columns */
+  #newsTable th:nth-child(2),
+  #newsTable td:nth-child(2) { width: 200px; max-width: 250px; }
+  #newsTable th:nth-child(3),
+  #newsTable td:nth-child(3) { width: 100px; max-width: 150px; white-space: nowrap; }
+</style>
+</head>
+<body>
+
+<h2>News Feed</h2>
+
+<input id="searchBox" type="text" placeholder="Search by title..." onkeyup="applyFilters()" />
+<select id="sourceFilter" onchange="applyFilters()">
+  <option value="">All Sources</option>
+</select>
+
+<table id="newsTable"></table>
+
+<script>
+const DATA_URL = "https://umbrella-jam.github.io/regulator/data.json";
+
+let jsonData = [];
+let filteredData = [];
+let sortState = {};
+
+// Format date to "Month Day, Year"
+function prettyDate(dateStr) {
+  if (!dateStr) return "";
+  const d = new Date(dateStr);
+  return d.toLocaleDateString(undefined, { year: "numeric", month: "long", day: "numeric" });
+}
+
+// Populate source filter dynamically
+function populateSourceFilter() {
+  const select = document.getElementById("sourceFilter");
+  const sources = [...new Set(jsonData.map(row => row.source))];
+  sources.forEach(src => {
+    const opt = document.createElement("option");
+    opt.value = src;
+    opt.textContent = src;
+    select.appendChild(opt);
+  });
+}
+
+// Build table
+function buildTable() {
+  const table = document.getElementById("newsTable");
+  if (filteredData.length === 0) {
+    table.innerHTML = "<tr><td colspan='3'>No articles found</td></tr>";
+    return;
+  }
+
+  let html = `
+    <thead>
+      <tr>
+        <th onclick="sortTable('title')">
+          Title ${sortState.title ? (sortState.title === 'asc' ? '▲' : '▼') : ''}
+        </th>
+        <th onclick="sortTable('pubDate')">
+          Publication Date ${sortState.pubDate ? (sortState.pubDate === 'asc' ? '▲' : '▼') : ''}
+        </th>
+        <th onclick="sortTable('source')">
+          Source ${sortState.source ? (sortState.source === 'asc' ? '▲' : '▼') : ''}
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+  `;
+
+  filteredData.forEach(row => {
+    html += `
+      <tr>
+        <td><a href="${row.link}" target="_blank">${row.title}</a></td>
+        <td>${prettyDate(row.pubDate)}</td>
+        <td>${row.source}</td>
+      </tr>`;
+  });
+
+  html += "</tbody>";
+  table.innerHTML = html;
+}
+
+// Apply search + source filter + persistent sorting
+function applyFilters() {
+  const searchText = document.getElementById("searchBox").value.toLowerCase();
+  const sourceFilter = document.getElementById("sourceFilter").value;
+
+  filteredData = jsonData.filter(row =>
+    row.title.toLowerCase().includes(searchText) &&
+    (sourceFilter === "" || row.source === sourceFilter)
+  );
+
+  // Maintain sorting
+  if (sortState.activeColumn) {
+    sortTable(sortState.activeColumn, true);
+  } else {
+    buildTable();
+  }
+}
+
+// Sort function
+function sortTable(column, internal = false) {
+  if (!internal) {
+    sortState[column] = sortState[column] === "asc" ? "desc" : "asc";
+    sortState.activeColumn = column;
+  }
+
+  const direction = sortState[column] || "asc";
+
+  filteredData.sort((a, b) => {
+    let valA = a[column];
+    let valB = b[column];
+
+    if (column === "pubDate") {
+      valA = new Date(valA);
+      valB = new Date(valB);
+    } else {
+      valA = valA.toLowerCase();
+      valB = valB.toLowerCase();
+    }
+
+    return direction === "asc" ? (valA > valB ? 1 : -1) : (valA < valB ? 1 : -1);
+  });
+
+  buildTable();
+}
+
+// Fetch JSON data
+fetch(DATA_URL)
+  .then(res => res.json())
+  .then(data => {
+    jsonData = data;
+    filteredData = [...data];
+    populateSourceFilter();
+    buildTable();
+  })
+  .catch(err => {
+    document.getElementById("newsTable").innerHTML = "<tr><td colspan='3'>Error loading data</td></tr>";
+    console.error(err);
+  });
+</script>
+
+</body>
+</html>
