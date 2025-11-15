@@ -49,12 +49,11 @@
   @media screen and (max-width: 700px) {
     table, thead, tbody, th, td, tr { display: block; width: 100%; }
     th { display: none; }
-    td { border: none; padding: 10px 0; }
-    td a { font-weight: bold; font-size: 16px; display: block; margin-bottom: 5px; }
-    td .mobile-info { display: none; font-size: 14px; color: #333; margin-bottom: 10px; }
-    td .summary { display: none; }
+    td { border: none; padding: 10px 0; font-size: 16px; }
+    td a { font-weight: bold; font-size: 18px; display: block; margin-bottom: 5px; }
+    td .mobile-meta { font-size: 14px; color: #555; margin-bottom: 5px; }
+    td .summary { font-size: 16px; margin-top: 5px; }
   }
-
 </style>
 </head>
 <body>
@@ -63,7 +62,7 @@
 
 <div id="controls">
   <input id="searchBox" type="text" placeholder="Search by title..." />
-  <button id="toggleAllBtn">Show All Summaries</button>
+  <button id="toggleAllBtn">Show Summaries</button>
   <select id="sourceFilter">
     <option value="">All Sources</option>
   </select>
@@ -100,13 +99,10 @@ function populateSourceFilter() {
 
 function toggleAllSummaries() {
   allVisible = !allVisible;
-  document.getElementById("toggleAllBtn").textContent = allVisible ? "Hide All Summaries" : "Show All Summaries";
+  document.getElementById("toggleAllBtn").textContent = allVisible ? "Hide Summaries" : "Show Summaries";
   filteredData.forEach((_, index) => {
     const summaryEl = document.getElementById(`summary-${index}`);
     if (summaryEl) summaryEl.style.display = allVisible ? "block" : "none";
-
-    const mobileEl = document.getElementById(`mobile-${index}`);
-    if (mobileEl) mobileEl.style.display = allVisible ? "block" : "none";
   });
 }
 
@@ -133,11 +129,8 @@ function buildTable() {
       <tr>
         <td>
           <a href="${row.link}" target="_blank">${row.title}</a>
+          <div class="mobile-meta">Source: ${row.source} | Date: ${prettyDate(row.pubDate)}</div>
           <div class="summary" id="summary-${index}" style="display:${allVisible ? 'block' : 'none'};">${row.summary}</div>
-          <div class="mobile-info" id="mobile-${index}" style="display:${allVisible ? 'block' : 'none'};">
-            <div><strong>Date:</strong> ${prettyDate(row.pubDate)}</div>
-            <div><strong>Summary:</strong> ${row.summary}</div>
-          </div>
         </td>
         <td>${prettyDate(row.pubDate)}</td>
         <td>${row.source}</td>
