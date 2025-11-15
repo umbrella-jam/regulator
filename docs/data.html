@@ -325,6 +325,10 @@ fetch(DATA_URL)
   .then(data => {
     jsonData = data;
     filteredData = [...data];
+
+    // Apply the 'Today' filter immediately on load
+    filteredData = filterByTimeRange(filteredData, 'today');
+
     populateSourceFilter();
     populateTimeFilter();
     buildTable();
