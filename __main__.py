@@ -113,7 +113,7 @@ def append_to_json(file_path: Path, new_articles: list[dict]):
     combined = existing_articles + filtered_new
     save_json(file_path, combined)
     print(f"Added {len(filtered_new)} new articles. Total articles: {len(combined)}")
-    
+
 # ------------------------
 # Main Scraper Class
 # ------------------------
@@ -148,9 +148,9 @@ if __name__ == "__main__":
     scraper = NewsScraper()
 
     # Add RSS feeds
-    scraper.add_rss_source("https://rss.nytimes.com/services/xml/rss/nyt/World.xml", "NYTimes")
-    scraper.add_rss_source("https://feeds.bbci.co.uk/news/world/rss.xml", "BBC World")
-
+    scraper.add_rss_source("https://www.justice.gov/news/rss?m=1", "DOJ")
+    # scraper.add_rss_source("https://feeds.bbci.co.uk/news/world/rss.xml", "BBC World")
+    
     # Add web sources (example)
     # scraper.add_web_source("https://example-news-site.com", example_news_site_parser, "Example News")
 
