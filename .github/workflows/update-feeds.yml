@@ -1,4 +1,4 @@
-name: Update RSS Feed
+name: Update Feeds
 
 on:
   schedule:
