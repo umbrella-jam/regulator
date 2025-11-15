@@ -3,9 +3,9 @@ import time
 import requests
 from bs4 import BeautifulSoup
 from datetime import datetime
-from regulator.utils.storage import load_existing_data, save_data
-from regulator.crawlers.doj import DojCrawler
-from regulator.crawlers.sec import SecCrawler
+from utils.storage import load_existing_data, save_data
+from crawlers.doj import DojCrawler
+from crawlers.sec import SecCrawler
 
 DATA_PATH = "docs/data.json"
 
