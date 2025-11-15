@@ -28,7 +28,6 @@
   #newsTable th:nth-child(2), #newsTable td:nth-child(2) { width: 200px; max-width: 250px; }
   #newsTable th:nth-child(3), #newsTable td:nth-child(3) { width: 50px; max-width: 200px; white-space: nowrap; }
 
-  /* Floating back-to-top button */
   #backToTopBtn {
     display: none;
     position: fixed;
@@ -129,7 +128,7 @@ function buildTable() {
       <tr>
         <td>
           <a href="${row.link}" target="_blank">${row.title}</a>
-          <div class="mobile-meta">Source: ${row.source} | Date: ${prettyDate(row.pubDate)}</div>
+          <div class="mobile-meta">${row.source} | ${prettyDate(row.pubDate)}</div>
           <div class="summary" id="summary-${index}" style="display:${allVisible ? 'block' : 'none'};">${row.summary}</div>
         </td>
         <td>${prettyDate(row.pubDate)}</td>
@@ -186,12 +185,10 @@ function toggleBackToTop() {
 }
 function scrollToTop() { window.scrollTo({top:0, behavior:'smooth'}); }
 
-// Event listeners
 document.getElementById("searchBox").addEventListener("input", debounceSearch);
 document.getElementById("sourceFilter").addEventListener("change", applyFilters);
 document.getElementById("toggleAllBtn").addEventListener("click", toggleAllSummaries);
 
-// Fetch JSON
 fetch(DATA_URL)
   .then(res => res.json())
   .then(data => {
