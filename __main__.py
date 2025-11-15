@@ -121,12 +121,26 @@ def save_json(file_path: Path, data: list[dict]):
     with file_path.open("w", encoding="utf-8") as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
 
-def append_to_json(file_path: Path, new_articles: list[dict]):
+def append_to_json(file_path: Path, new_articles: List[Dict]):
     existing_articles = load_json(file_path)
     existing_links = {a["link"] for a in existing_articles}
+
+    # Only keep new articles not already in existing
     filtered_new = [a for a in new_articles if a["link"] not in existing_links]
 
+    # Combine old + new
     combined = existing_articles + filtered_new
+
+    # Sort by pubDate descending (newest first)
+    def parse_date(article):
+        try:
+            return datetime.strptime(article["pubDate"], "%a, %d %b %Y %H:%M:%S %z")
+        except Exception:
+            return datetime.min  # fallback for bad/missing date
+
+    combined.sort(key=parse_date, reverse=True)
+
+    # Save and print
     save_json(file_path, combined)
     print(f"Added {len(filtered_new)} new articles. Total articles: {len(combined)}")
 
