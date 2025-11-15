@@ -18,7 +18,7 @@ def fetch_rss_feed(url: str, source_name: str = "") -> List[Dict]:
     Fetch RSS feed using BeautifulSoup XML parser for leniency.
     Skips feeds that cannot be parsed.
     """
-    headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"}
+    headers = {"User-Agent": "Individual Marion <marion.umbel@gmail.com>"}
     try:
         resp = requests.get(url, headers=headers, timeout=10)
         resp.raise_for_status()
