@@ -89,9 +89,9 @@ def example_news_site_parser(html: str) -> List[Dict]:
 # JSON Management
 # ------------------------
 
-DATA_FILE = Path("data.json")
+DATA_FILE = Path(__file__).parent / "docs" / "data.json"
 
-def load_json(file_path: Path) -> List[Dict]:
+def load_json(file_path: Path) -> list[dict]:
     if file_path.exists():
         try:
             return json.load(file_path.open("r", encoding="utf-8"))
@@ -100,19 +100,20 @@ def load_json(file_path: Path) -> List[Dict]:
             return []
     return []
 
-def save_json(file_path: Path, data: List[Dict]):
+def save_json(file_path: Path, data: list[dict]):
+    file_path.parent.mkdir(parents=True, exist_ok=True)  # ensure docs/ exists
     with file_path.open("w", encoding="utf-8") as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
 
-def append_to_json(file_path: Path, new_articles: List[Dict]):
+def append_to_json(file_path: Path, new_articles: list[dict]):
     existing_articles = load_json(file_path)
-    existing_links = {a['link'] for a in existing_articles}
-    filtered_new = [a for a in new_articles if a['link'] not in existing_links]
+    existing_links = {a["link"] for a in existing_articles}
+    filtered_new = [a for a in new_articles if a["link"] not in existing_links]
 
     combined = existing_articles + filtered_new
     save_json(file_path, combined)
     print(f"Added {len(filtered_new)} new articles. Total articles: {len(combined)}")
-
+    
 # ------------------------
 # Main Scraper Class
 # ------------------------

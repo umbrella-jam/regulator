@@ -1,12 +1,5 @@
 [
   {
-    "title": "Hurricane Melissa Leaves Behind a Staggering Homelessness Toll in Jamaica",
-    "link": "https://www.nytimes.com/2025/11/14/world/americas/hurricane-melissa-homeless-jamaica.html",
-    "pubDate": "Fri, 14 Nov 2025 13:35:11 +0000",
-    "summary": "Two weeks after Hurricane Melissa wrecked western Jamaica, officials are beginning to grapple with the challenge of trying to find housing for thousands of families.",
-    "source": "NYTimes"
-  },
-  {
     "title": "Israeli Settler Attack During West Bank Olive Harvest Leads to Death of a Boy",
     "link": "https://www.nytimes.com/2025/11/14/world/middleeast/west-bank-settler-violence-olive-harvest.html",
     "pubDate": "Fri, 14 Nov 2025 20:10:04 +0000",
@@ -571,6 +564,13 @@
     "link": "https://www.nytimes.com/2025/11/14/world/europe/kenya-president-saudi-arabia-maids.html",
     "pubDate": "Fri, 14 Nov 2025 10:00:22 +0000",
     "summary": "President William Ruto’s government acts as an arm of an industry whose leaders compare women to dogs and blame them for their own abuse, a Times investigation found.",
+    "source": "NYTimes"
+  },
+  {
+    "title": "Hurricane Melissa Leaves Behind a Staggering Homelessness Toll in Jamaica",
+    "link": "https://www.nytimes.com/2025/11/14/world/americas/hurricane-melissa-homeless-jamaica.html",
+    "pubDate": "Fri, 14 Nov 2025 13:35:11 +0000",
+    "summary": "Two weeks after Hurricane Melissa wrecked western Jamaica, officials are beginning to grapple with the challenge of trying to find housing for thousands of families.",
     "source": "NYTimes"
   }
 ]
