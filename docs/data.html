@@ -1,63 +1,133 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8" />
-<title>News Table</title>
-<style>
-  body { font-family: Arial, sans-serif; margin: 25px; }
-  table { width: 100%; border-collapse: collapse; margin-top: 15px; }
-  th, td { padding: 10px; border: 1px solid #ddd; vertical-align: top; }
-  th { background: #f2f2f2; text-align: center; cursor: pointer; font-weight: bold; user-select: none; }
-  tr:nth-child(even) { background: #fafafa; }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News Table</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 25px;
+    }
 
-  #controls {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    margin-bottom: 15px;
-    flex-wrap: wrap;
-  }
-  #controls input, #controls select, #controls button {
-    padding: 8px 12px;
-    font-size: 14px;
-    height: 36px;
-  }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
 
-  .summary { display: none; margin-top: 5px; font-size: 14px; color: #333; }
+    th, td {
+      padding: 10px;
+      border: 1px solid #ddd;
+      vertical-align: top;
+    }
 
-  #newsTable th:nth-child(2), #newsTable td:nth-child(2) { width: 200px; max-width: 250px; }
-  #newsTable th:nth-child(3), #newsTable td:nth-child(3) { width: 50px; max-width: 200px; white-space: nowrap; }
+    th {
+      background: #f2f2f2;
+      text-align: center;
+      cursor: pointer;
+      font-weight: bold;
+      user-select: none;
+    }
 
-  #backToTopBtn {
-    display: none;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 99;
-    padding: 12px 16px;
-    font-size: 14px;
-    background: #979797;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-  }
+    tr:nth-child(even) {
+      background: #fafafa;
+    }
 
-  /* Mobile styles */
-  @media screen and (max-width: 700px) {
-      table, thead, tbody, th, td, tr { display: block; width: 100%; }
-      th { display: none; }
+    /* Controls for filtering */
+    #controls {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 15px;
+      flex-wrap: wrap;
+    }
+
+    #controls input,
+    #controls select,
+    #controls button {
+      padding: 8px 12px;
+      font-size: 14px;
+      height: 36px;
+    }
+
+    .summary {
+      display: none;
+      margin-top: 5px;
+      font-size: 14px;
+      color: #333;
+    }
+
+    /* Table column width adjustments */
+    #newsTable th:nth-child(2),
+    #newsTable td:nth-child(2) {
+      width: 200px;
+      max-width: 250px;
+    }
+
+    #newsTable th:nth-child(3),
+    #newsTable td:nth-child(3) {
+      width: 50px;
+      max-width: 200px;
+      white-space: nowrap;
+    }
+
+    /* Back to top button styles */
+    #backToTopBtn {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 99;
+      padding: 12px 16px;
+      font-size: 14px;
+      background: #979797;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Mobile styles */
+    @media screen and (max-width: 700px) {
+      table, thead, tbody, th, td, tr {
+        display: block;
+        width: 100%;
+      }
+
+      th {
+        display: none;
+      }
 
       /* Hide the separate source/date columns in mobile */
-      td:nth-child(2), td:nth-child(3) { display: none; }
+      td:nth-child(2),
+      td:nth-child(3) {
+        display: none;
+      }
 
-      td a { font-weight: bold; font-size: 34px; color: #555; display: block; margin-bottom: 5px; }
-      td .mobile-meta { font-size: 30px; color: #555; margin-bottom: 5px; }
-      td .summary { font-size: 30px; margin-top: 5px; display: none; }
-  }
+      td a {
+        font-weight: bold;
+        font-size: 34px;
+        color: #555;
+        display: block;
+        margin-bottom: 5px;
+      }
 
-</style>
+      td .mobile-meta {
+        font-size: 30px;
+        color: #555;
+        margin-bottom: 5px;
+      }
+
+      td .summary {
+        font-size: 30px;
+        margin-top: 5px;
+        display: none;
+      }
+    }
+
+  </style>
 </head>
 <body>
 
@@ -66,8 +136,18 @@
 <div id="controls">
   <input id="searchBox" type="text" placeholder="Search by title..." />
   <button id="toggleAllBtn">Show Summaries</button>
+  
+  <!-- Source Filter Dropdown -->
   <select id="sourceFilter">
     <option value="">All Sources</option>
+  </select>
+
+  <!-- Time Filter Dropdown -->
+  <select id="timeFilter">
+    <option value="today">Today</option>
+    <option value="last-week">Last Week</option>
+    <option value="last-month">Last Month</option>
+    <option value="last-year">Last Year</option>
   </select>
 </div>
 
@@ -76,19 +156,21 @@
 <button id="backToTopBtn" onclick="scrollToTop()">↑</button>
 
 <script>
+// Global variables for managing data and UI state
 const DATA_URL = "https://umbrella-jam.github.io/regulator/data.json";
-
 let jsonData = [];
 let filteredData = [];
 let sortState = {};
 let searchTimeout;
 let allVisible = false;
 
+// Function to format dates in a user-friendly format
 function prettyDate(dateStr) {
   const d = new Date(dateStr);
   return d.toLocaleDateString(undefined, { year: "numeric", month: "long", day: "numeric" });
 }
 
+// Function to populate the Source Filter dropdown
 function populateSourceFilter() {
   const select = document.getElementById("sourceFilter");
   const sources = [...new Set(jsonData.map(row => row.source))].sort();
@@ -100,6 +182,35 @@ function populateSourceFilter() {
   });
 }
 
+// Function to populate the Time Filter dropdown
+function populateTimeFilter() {
+  const timeFilter = document.getElementById("timeFilter");
+  timeFilter.addEventListener("change", applyFilters);
+}
+
+// Function to filter data by the selected time range
+function filterByTimeRange(data, timeRange) {
+  const now = new Date();
+  return data.filter(row => {
+    const pubDate = new Date(row.pubDate);
+    const diffTime = now - pubDate;
+    
+    switch (timeRange) {
+      case "today":
+        return diffTime < 24 * 60 * 60 * 1000; // Within the last 24 hours
+      case "last-week":
+        return diffTime < 7 * 24 * 60 * 60 * 1000; // Within the last week
+      case "last-month":
+        return diffTime < 30 * 24 * 60 * 60 * 1000; // Within the last month
+      case "last-year":
+        return diffTime < 365 * 24 * 60 * 60 * 1000; // Within the last year
+      default:
+        return true; // No filter, return all
+    }
+  });
+}
+
+// Function to toggle the visibility of all summaries
 function toggleAllSummaries() {
   allVisible = !allVisible;
   document.getElementById("toggleAllBtn").textContent = allVisible ? "Hide Summaries" : "Show Summaries";
@@ -109,6 +220,7 @@ function toggleAllSummaries() {
   });
 }
 
+// Function to build the news table from filtered data
 function buildTable() {
   const table = document.getElementById("newsTable");
   let html = `
@@ -145,14 +257,19 @@ function buildTable() {
   table.innerHTML = html;
 }
 
+// Function to apply filters (search, source, and time)
 function applyFilters() {
   const text = document.getElementById("searchBox").value.toLowerCase();
   const source = document.getElementById("sourceFilter").value;
+  const timeRange = document.getElementById("timeFilter").value;
 
   filteredData = jsonData.filter(row => 
     row.title.toLowerCase().includes(text) &&
     (source === "" || row.source === source)
   );
+
+  // Apply time filter
+  filteredData = filterByTimeRange(filteredData, timeRange);
 
   if (sortState.activeColumn) {
     sortTable(sortState.activeColumn, true);
@@ -161,11 +278,13 @@ function applyFilters() {
   }
 }
 
+// Function to handle debouncing for the search input
 function debounceSearch() {
   clearTimeout(searchTimeout);
   searchTimeout = setTimeout(applyFilters, 300);
 }
 
+// Function to sort the table by a specified column
 function sortTable(column, internal = false) {
   if (!internal) {
     sortState[column] = sortState[column] === "asc" ? "desc" : "asc";
@@ -183,30 +302,38 @@ function sortTable(column, internal = false) {
   buildTable();
 }
 
-// Back to top button
+// Back to top button functionality
 window.onscroll = function() { toggleBackToTop() };
+
 function toggleBackToTop() {
   const btn = document.getElementById("backToTopBtn");
   btn.style.display = (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) ? "block" : "none";
 }
-function scrollToTop() { window.scrollTo({top:0, behavior:'smooth'}); }
 
+function scrollToTop() {
+  window.scrollTo({top: 0, behavior: 'smooth'});
+}
+
+// Event listeners for user interactions
 document.getElementById("searchBox").addEventListener("input", debounceSearch);
 document.getElementById("sourceFilter").addEventListener("change", applyFilters);
 document.getElementById("toggleAllBtn").addEventListener("click", toggleAllSummaries);
 
+// Fetch and process data from the external JSON file
 fetch(DATA_URL)
   .then(res => res.json())
   .then(data => {
     jsonData = data;
     filteredData = [...data];
     populateSourceFilter();
+    populateTimeFilter();
     buildTable();
   })
   .catch(err => {
     document.getElementById("newsTable").innerHTML = "<tr><td>Error loading data</td></tr>";
     console.error(err);
   });
+
 </script>
 
 </body>
