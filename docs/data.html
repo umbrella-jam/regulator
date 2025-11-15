@@ -148,6 +148,7 @@
     <option value="last-week">Last Week</option>
     <option value="last-month">Last Month</option>
     <option value="last-year">Last Year</option>
+    <option value="all-time">All Time</option>
   </select>
 </div>
 
@@ -204,6 +205,8 @@ function filterByTimeRange(data, timeRange) {
         return diffTime < 30 * 24 * 60 * 60 * 1000; // Within the last month
       case "last-year":
         return diffTime < 365 * 24 * 60 * 60 * 1000; // Within the last year
+      case "all-time":
+        return true; // No filter, return all
       default:
         return true; // No filter, return all
     }
