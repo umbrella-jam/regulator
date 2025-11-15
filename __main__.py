@@ -7,6 +7,7 @@ import json
 from pathlib import Path
 from datetime import datetime
 from typing import List, Dict, Callable
+import html
 
 # ------------------------
 # Helper Functions
@@ -14,29 +15,44 @@ from typing import List, Dict, Callable
 
 def fetch_rss_feed(url: str, source_name: str = "") -> List[Dict]:
     """
-    Fetch news from an RSS feed using XML parsing (no feedparser).
+    Fetch RSS feed using BeautifulSoup XML parser for leniency.
+    Skips feeds that cannot be parsed.
     """
     headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"}
-    response = requests.get(url, headers=headers, timeout=10)
-    response.raise_for_status()
-    content = response.content
+    try:
+        resp = requests.get(url, headers=headers, timeout=10)
+        resp.raise_for_status()
+    except Exception as e:
+        print(f"Failed to fetch RSS feed {url}: {e}")
+        return []
+
+    # Parse with BeautifulSoup for leniency
+    try:
+        soup = BeautifulSoup(resp.content, "xml")
+        items = soup.find_all("item")
+    except Exception as e:
+        print(f"Failed to parse RSS feed {url}: {e}")
+        return []
 
     articles = []
-    root = ET.fromstring(content)
+    for item in items:
+        try:
+            title = item.title.text if item.title else ""
+            link = item.link.text if item.link else ""
+            pubDate = item.pubDate.text if item.pubDate else ""
+            description = item.description.text if item.description else ""
 
-    for item in root.findall(".//item"):
-        title = item.findtext("title", default="")
-        link = item.findtext("link", default="")
-        published = item.findtext("pubDate", default="")
-        summary = item.findtext("description", default="")
+            articles.append({
+                "title": title.strip(),
+                "link": link.strip(),
+                "pubDate": pubDate.strip(),
+                "summary": description.strip(),
+                "source": source_name or url
+            })
+        except Exception as e:
+            print(f"Skipping invalid item in {url}: {e}")
+            continue
 
-        articles.append({
-            "title": title.strip(),
-            "link": link.strip(),
-            "pubDate": published.strip(),
-            "summary": summary.strip(),
-            "source": source_name or url
-        })
     return articles
 
 def fetch_webpage(url: str) -> str:
@@ -153,6 +169,8 @@ if __name__ == "__main__":
     # scraper.add_rss_source("https://www.justice.gov/news/rss?type=image_gallery&m=1", "DOJ Image")
     scraper.add_rss_source("https://www.justice.gov/news/rss?type=press_release&m=1", "DOJ Press Release")
     scraper.add_rss_source("https://www.justice.gov/news/rss?type=speech&m=1", "DOJ Speech")
+    scraper.add_rss_source("https://www.sec.gov/enforcement-litigation/litigation-releases/rss", "SEC Litigation Releases")
+    scraper.add_rss_source("https://www.sec.gov/enforcement-litigation/administrative-proceedings/rss", "SEC Administrative Proceedings")
 
         
     # Add web sources (example)
