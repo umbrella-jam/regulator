@@ -21,7 +21,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Run scraper
-        run: python regulator/__main__.py
+        run: python __main__.py
       
       - name: Commit and push updated feed
         env:
