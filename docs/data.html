@@ -1,39 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8" />
-<title>News Feed</title>
+<title>News Table</title>
+
 <style>
   body { font-family: Arial, sans-serif; margin: 25px; }
-  h2 { margin-bottom: 10px; }
   table { width: 100%; border-collapse: collapse; margin-top: 15px; }
   th, td { padding: 10px; border: 1px solid #ddd; vertical-align: top; }
   th { 
     background: #f2f2f2; 
-    text-align: left; 
+    text-align: center; 
     cursor: pointer; 
     font-weight: bold; 
     user-select: none;
   }
   tr:nth-child(even) { background: #fafafa; }
-  #searchBox, #sourceFilter { width: 200px; padding: 8px; font-size: 14px; margin-right: 10px; }
-  .sort-indicator { margin-left: 6px; font-size: 12px; opacity: 0.6; }
-
-  /* Wider Publication Date & Source columns */
-  #newsTable th:nth-child(2),
-  #newsTable td:nth-child(2) { width: 200px; max-width: 250px; }
-  #newsTable th:nth-child(3),
-  #newsTable td:nth-child(3) { width: 100px; max-width: 150px; white-space: nowrap; }
+  #controls {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  #controls input, #controls select, #controls button {
+    padding: 8px 12px;
+    font-size: 14px;
+    height: 36px;
+  }
+  .summary { display: none; margin-top: 5px; font-size: 14px; color: #333; }
+  #newsTable th:nth-child(2), #newsTable td:nth-child(2) { width: 200px; max-width: 250px; }
+  #newsTable th:nth-child(3), #newsTable td:nth-child(3) { width: 50px; max-width: 200px; white-space: nowrap; }
 </style>
 </head>
 <body>
 
 <h2>News Feed</h2>
 
-<input id="searchBox" type="text" placeholder="Search by title..." onkeyup="applyFilters()" />
-<select id="sourceFilter" onchange="applyFilters()">
-  <option value="">All Sources</option>
-</select>
+<div id="controls">
+  <input id="searchBox" type="text" placeholder="Search by title..." />
+  <button id="toggleAllBtn">Show All Summaries</button>
+  <select id="sourceFilter">
+    <option value="">All Sources</option>
+  </select>
+</div>
 
 <table id="newsTable"></table>
 
@@ -43,15 +52,14 @@ const DATA_URL = "https://umbrella-jam.github.io/regulator/data.json";
 let jsonData = [];
 let filteredData = [];
 let sortState = {};
+let searchTimeout;
+let allVisible = false;
 
-// Format date to "Month Day, Year"
 function prettyDate(dateStr) {
-  if (!dateStr) return "";
   const d = new Date(dateStr);
   return d.toLocaleDateString(undefined, { year: "numeric", month: "long", day: "numeric" });
 }
 
-// Populate source filter dynamically
 function populateSourceFilter() {
   const select = document.getElementById("sourceFilter");
   const sources = [...new Set(jsonData.map(row => row.source))];
@@ -63,14 +71,17 @@ function populateSourceFilter() {
   });
 }
 
-// Build table
+function toggleAllSummaries() {
+  allVisible = !allVisible;
+  document.getElementById("toggleAllBtn").textContent = allVisible ? "Hide All Summaries" : "Show All Summaries";
+  filteredData.forEach((_, index) => {
+    const summaryEl = document.getElementById(`summary-${index}`);
+    if (summaryEl) summaryEl.style.display = allVisible ? "block" : "none";
+  });
+}
+
 function buildTable() {
   const table = document.getElementById("newsTable");
-  if (filteredData.length === 0) {
-    table.innerHTML = "<tr><td colspan='3'>No articles found</td></tr>";
-    return;
-  }
-
   let html = `
     <thead>
       <tr>
@@ -87,31 +98,30 @@ function buildTable() {
     </thead>
     <tbody>
   `;
-
-  filteredData.forEach(row => {
+  filteredData.forEach((row, index) => {
     html += `
       <tr>
-        <td><a href="${row.link}" target="_blank">${row.title}</a></td>
+        <td>
+          <a href="${row.link}" target="_blank">${row.title}</a><br>
+          <div class="summary" id="summary-${index}" style="display:${allVisible ? 'block' : 'none'};">${row.summary}</div>
+        </td>
         <td>${prettyDate(row.pubDate)}</td>
         <td>${row.source}</td>
       </tr>`;
   });
-
   html += "</tbody>";
   table.innerHTML = html;
 }
 
-// Apply search + source filter + persistent sorting
 function applyFilters() {
-  const searchText = document.getElementById("searchBox").value.toLowerCase();
-  const sourceFilter = document.getElementById("sourceFilter").value;
+  const text = document.getElementById("searchBox").value.toLowerCase();
+  const source = document.getElementById("sourceFilter").value;
 
-  filteredData = jsonData.filter(row =>
-    row.title.toLowerCase().includes(searchText) &&
-    (sourceFilter === "" || row.source === sourceFilter)
+  filteredData = jsonData.filter(row => 
+    row.title.toLowerCase().includes(text) &&
+    (source === "" || row.source === source)
   );
 
-  // Maintain sorting
   if (sortState.activeColumn) {
     sortTable(sortState.activeColumn, true);
   } else {
@@ -119,34 +129,34 @@ function applyFilters() {
   }
 }
 
-// Sort function
+function debounceSearch() {
+  clearTimeout(searchTimeout);
+  searchTimeout = setTimeout(applyFilters, 300);
+}
+
 function sortTable(column, internal = false) {
   if (!internal) {
     sortState[column] = sortState[column] === "asc" ? "desc" : "asc";
     sortState.activeColumn = column;
   }
-
   const direction = sortState[column] || "asc";
 
   filteredData.sort((a, b) => {
     let valA = a[column];
     let valB = b[column];
-
-    if (column === "pubDate") {
-      valA = new Date(valA);
-      valB = new Date(valB);
-    } else {
-      valA = valA.toLowerCase();
-      valB = valB.toLowerCase();
-    }
-
+    if (column === "pubDate") { valA = new Date(valA); valB = new Date(valB); }
     return direction === "asc" ? (valA > valB ? 1 : -1) : (valA < valB ? 1 : -1);
   });
 
   buildTable();
 }
 
-// Fetch JSON data
+// Event listeners
+document.getElementById("searchBox").addEventListener("input", debounceSearch);
+document.getElementById("sourceFilter").addEventListener("change", applyFilters);
+document.getElementById("toggleAllBtn").addEventListener("click", toggleAllSummaries);
+
+// Fetch JSON
 fetch(DATA_URL)
   .then(res => res.json())
   .then(data => {
@@ -156,7 +166,7 @@ fetch(DATA_URL)
     buildTable();
   })
   .catch(err => {
-    document.getElementById("newsTable").innerHTML = "<tr><td colspan='3'>Error loading data</td></tr>";
+    document.getElementById("newsTable").innerHTML = "<tr><td>Error loading data</td></tr>";
     console.error(err);
   });
 </script>
