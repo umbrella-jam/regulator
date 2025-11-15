@@ -91,7 +91,7 @@ function prettyDate(dateStr) {
 
 function populateSourceFilter() {
   const select = document.getElementById("sourceFilter");
-  const sources = [...new Set(jsonData.map(row => row.source))];
+  const sources = [...new Set(jsonData.map(row => row.source))].sort();
   sources.forEach(src => {
     const opt = document.createElement("option");
     opt.value = src;
