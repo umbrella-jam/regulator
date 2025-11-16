@@ -199,9 +199,10 @@ if __name__ == "__main__":
     # Add IRS Criminal Investigation as a web source
     scraper.add_web_source(
         "https://www.irs.gov/compliance/criminal-investigation/criminal-investigation-press-releases",
-        lambda html: irs_spider(html),
+        lambda _: list(irs_spider("https://www.irs.gov/compliance/criminal-investigation/criminal-investigation-press-releases")),
         "IRS Criminal Investigation"
     )
+
 
 
 
