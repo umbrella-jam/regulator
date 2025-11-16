@@ -88,6 +88,8 @@ def scrape_news_page(url: str, parser: Callable[[str], List[Dict]], source_name:
 
 from sources.fema import parse_all as fema_spider
 from sources.irs import irs_spider
+from sources.ftc import ftc_spider
+
 
 # ------------------------
 # JSON Management
@@ -202,9 +204,11 @@ if __name__ == "__main__":
         lambda _: list(irs_spider("https://www.irs.gov/compliance/criminal-investigation/criminal-investigation-press-releases")),
         "IRS CI"
     )
-
-
-
+    scraper.add_web_source(
+        "https://www.ftc.gov/news-events/press-releases",
+        lambda _: ftc_spider("https://www.ftc.gov/news-events/press-releases", "FTC"),
+        "FTC"
+    )
 
     # Scrape all sources
     articles = scraper.scrape_all()
