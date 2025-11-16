@@ -329,8 +329,8 @@ fetch(DATA_URL)
     jsonData = data;
     filteredData = [...data];
 
-    // Apply the 'Today' filter immediately on load
-    filteredData = filterByTimeRange(filteredData, 'today');
+    // Apply the 'last-week' filter immediately on load
+    filteredData = filterByTimeRange(filteredData, 'last-week');
 
     populateSourceFilter();
     populateTimeFilter();
