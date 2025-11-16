@@ -4,9 +4,6 @@ import requests
 from bs4 import BeautifulSoup
 from urllib.parse import urljoin
 from datetime import datetime, timezone
-from bs4 import MarkupResemblesLocatorWarning
-import warnings
-warnings.filterwarnings("ignore", category=MarkupResemblesLocatorWarning)
 
 def irs_spider(start_url: str):
     """
