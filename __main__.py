@@ -113,27 +113,19 @@ def save_json(file_path: Path, data: list[dict]):
 
 def append_to_json(file_path: Path, new_articles: List[Dict]):
     existing_articles = load_json(file_path)
-    existing_links = {a["link"] for a in existing_articles}
-
-    # Only keep new articles not already in existing
-    filtered_new = [a for a in new_articles if a["link"] not in existing_links]
 
     # Combine old + new
-    combined = existing_articles + filtered_new
+    combined = existing_articles + new_articles
 
-    # Sort by pubDate descending (newest first)
+    # Helper to parse date
     def parse_date(article):
         raw = article.get("pubDate", "")
         if not raw:
             return datetime.min.replace(tzinfo=timezone.utc)
-
-        # Try RSS format (e.g. "Fri, 15 Nov 2025 12:00:00 +0000")
         try:
             return datetime.strptime(raw, "%a, %d %b %Y %H:%M:%S %z")
         except Exception:
             pass
-
-        # Try ISO 8601 like FEMA (e.g. "2025-11-14T10:30:00Z")
         try:
             dt = datetime.fromisoformat(raw.replace("Z", "+00:00"))
             if dt.tzinfo is None:
@@ -141,17 +133,37 @@ def append_to_json(file_path: Path, new_articles: List[Dict]):
             return dt
         except Exception:
             pass
-
-        # Fallback
         return datetime.min.replace(tzinfo=timezone.utc)
 
+    # Deduplicate by link
+    deduped = {}
+    for article in combined:
+        link = article.get("link")
+        if not link:
+            continue
 
+        if link in deduped:
+            existing = deduped[link]
+            # Prefer article with older date and non-empty summary
+            current_date = parse_date(article)
+            existing_date = parse_date(existing)
 
-    combined.sort(key=parse_date, reverse=True)
+            if current_date < existing_date:
+                deduped[link] = article
+            elif current_date == existing_date:
+                # If dates equal, prefer one with non-empty summary
+                if article.get("summary") and not existing.get("summary"):
+                    deduped[link] = article
+        else:
+            deduped[link] = article
 
-    # Save and print
-    save_json(file_path, combined)
-    print(f"Added {len(filtered_new)} new articles. Total articles: {len(combined)}")
+    # Sort by pubDate descending (newest first)
+    final_articles = sorted(deduped.values(), key=parse_date, reverse=True)
+
+    # Save
+    save_json(file_path, final_articles)
+    print(f"Added {len(final_articles) - len(existing_articles)} new articles. Total articles: {len(final_articles)}")
+
 
 # ------------------------
 # Main Scraper Class
