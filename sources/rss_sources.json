@@ -98,5 +98,7 @@
     {"url": "https://www.justice.gov/news/rss?type%5B0%5D=press_release&type%5B1%5D=speech&field_component=2136&search_api_language=en&require_all=0", "name": "DOJ"},
     {"url": "https://www.justice.gov/news/rss?type=press_release&groupname=621&field_component=2141&search_api_language=en&require_all=0", "name": "DOJ"},
     {"url": "https://www.justice.gov/news/rss?type=press_release&groupname=626&field_component=2156&search_api_language=en&require_all=0", "name": "DOJ"},
-    {"url": "https://www.justice.gov/news/rss?type=press_release&groupname=306&field_component=1836&search_api_language=en&require_all=0", "name": "DOJ"}
+    {"url": "https://www.justice.gov/news/rss?type=press_release&groupname=306&field_component=1836&search_api_language=en&require_all=0", "name": "DOJ"},
+    {"url": "https://www.federalregister.gov/api/v1/documents.rss?conditions%5Bcorrection%5D=0&conditions%5Bpresident%5D=&conditions%5Bpresidential_document_type%5D=executive_order&conditions%5Bsigning_date%5D%5Byear%5D=&conditions%5Btype%5D%5B%5D=PRESDOCU", "name": "Executive Orders"},
+    {"url": "https://www.federalregister.gov/api/v1/documents.rss?conditions%5Bagencies%5D%5B%5D=executive-office-of-the-president", "name": "Executive Office of the President"}
 ]
