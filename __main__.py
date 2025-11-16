@@ -87,6 +87,7 @@ def scrape_news_page(url: str, parser: Callable[[str], List[Dict]], source_name:
 # ------------------------
 
 from sources.fema import parse_all as fema_spider
+from sources.irs import irs_spider
 
 # ------------------------
 # JSON Management
@@ -194,6 +195,15 @@ if __name__ == "__main__":
         lambda _: fema_spider("https://www.fema.gov/about/news-multimedia/press-releases"),
         "FEMA"
     )
+
+    # Add IRS Criminal Investigation as a web source
+    scraper.add_web_source(
+        "https://www.irs.gov/compliance/criminal-investigation/criminal-investigation-press-releases",
+        lambda html: irs_spider(html),
+        "IRS Criminal Investigation"
+    )
+
+
 
     # Scrape all sources
     articles = scraper.scrape_all()
