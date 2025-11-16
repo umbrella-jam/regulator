@@ -5,159 +5,76 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>News Table</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 25px;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 15px;
-    }
-
-    th, td {
-      padding: 10px;
-      border: 1px solid #ddd;
-      vertical-align: top;
-    }
-
-    th {
-      background: #f2f2f2;
-      text-align: center;
-      cursor: pointer;
-      font-weight: bold;
-      user-select: none;
-    }
-
-    tr:nth-child(even) {
-      background: #fafafa;
-    }
-
-    /* Controls for filtering */
-    #controls {
-      display: flex;
-      gap: 10px;
-      align-items: center;
-      margin-bottom: 15px;
-      flex-wrap: wrap;
-    }
-
-    #controls input,
-    #controls select,
-    #controls button {
-      padding: 8px 12px;
-      font-size: 14px;
-      height: 36px;
-    }
-
-    .summary {
-      display: none;
-      margin-top: 5px;
-      font-size: 14px;
-      color: #333;
-    }
-
-    /* Table column width adjustments */
-    #newsTable th:nth-child(2),
-    #newsTable td:nth-child(2) {
-      width: 200px;
-      max-width: 250px;
-    }
-
-    #newsTable th:nth-child(3),
-    #newsTable td:nth-child(3) {
-      width: 50px;
-      max-width: 200px;
-      white-space: nowrap;
-    }
-
-    /* Back to top button styles */
-    #backToTopBtn {
-      display: none;
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      z-index: 99;
-      padding: 12px 16px;
-      font-size: 14px;
-      background: #979797;
-      color: white;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-    }
-
-    /* Mobile styles */
+    body { font-family: Arial, sans-serif; margin: 25px; }
+    table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+    th, td { padding: 10px; border: 1px solid #ddd; vertical-align: top; }
+    th { background: #f2f2f2; text-align: center; cursor: pointer; font-weight: bold; user-select: none; }
+    tr:nth-child(even) { background: #fafafa; }
+    #controls { display: flex; gap: 10px; align-items: center; margin-bottom: 15px; flex-wrap: wrap; }
+    #controls input, #controls select, #controls button { padding: 6px 10px; font-size: 14px; height: auto; box-sizing: border-box; }
+    .summary { display: none; margin-top: 5px; font-size: 14px; color: #333; }
+    #newsTable th:nth-child(2), #newsTable td:nth-child(2) { width: 200px; max-width: 250px; }
+    #newsTable th:nth-child(3), #newsTable td:nth-child(3) { width: 50px; max-width: 200px; white-space: nowrap; }
+    #backToTopBtn { display: none; position: fixed; bottom: 20px; right: 20px; z-index: 99; padding: 12px 16px; font-size: 14px; background: #979797; color: white; border: none; border-radius: 50%; cursor: pointer; box-shadow: 0 2px 6px rgba(0,0,0,0.3); }
     @media screen and (max-width: 700px) {
-      table, thead, tbody, th, td, tr {
-        display: block;
-        width: 100%;
-      }
-
-      th {
-        display: none;
-      }
-
-      /* Hide the separate source/date columns in mobile */
-      td:nth-child(2),
-      td:nth-child(3) {
-        display: none;
-      }
-
-       td a {
-        font-weight: bold;
-        font-size: 1.6rem; /* Adjusted to relative unit */
-        color: #555;
-        display: block;
-        margin-bottom: 5px;
-      }
-
-      td .mobile-meta {
-        font-size: 1.2rem; /* Adjusted to relative unit */
-        color: #555;
-        margin-bottom: 5px;
-      }
-
-      td .summary {
-        font-size: 1.2rem; /* Adjusted to relative unit */
-        margin-top: 5px;
-        display: none;
-      }
+      table, thead, tbody, th, td, tr { display: block; width: 100%; }
+      th { display: none; }
+      td:nth-child(2), td:nth-child(3) { display: none; }
+      td a { font-weight: bold; font-size: 1.6rem; color: #555; display: block; margin-bottom: 5px; }
+      td .mobile-meta { font-size: 1.2rem; color: #555; margin-bottom: 5px; }
+      td .summary { font-size: 1.2rem; margin-top: 5px; display: none; }
     }
-
   </style>
 </head>
 <body>
 
-<h2>News Feed 1.2</h2>
+<h2>News Feed 1.3</h2>
 
 <div id="controls">
-  <input id="searchBox" type="text" placeholder="Search by title..." />
-  <button id="toggleAllBtn">Show Summaries</button>
-  
-  <!-- Source Filter Dropdown -->
-  <select id="sourceFilter">
-    <option value="">All Sources</option>
-  </select>
 
-  <!-- Time Filter Dropdown -->
-  <select id="timeFilter">
-    <option value="today">Today</option>
-    <option value="last-week">Last Week</option>
-    <option value="last-month">Last Month</option>
-    <option value="last-year">Last Year</option>
-    <option value="all-time">All Time</option>
-  </select>
+  <!-- Search Box -->
+  <div class="control-group">
+    <label for="searchBox">Search:</label>
+    <input id="searchBox" type="text" placeholder="Search title, URL, or description..." />
+  </div>
+
+  <!-- Keyword exclusion -->
+  <div class="control-group">
+    <label for="keywordFilter">Exclude Keywords:</label>
+    <input id="keywordFilter" type="text" placeholder="Comma-separated keywords..." />
+  </div>
+
+  <!-- Toggle summaries -->
+  <div class="control-group">
+    <button id="toggleAllBtn">Show Summaries</button>
+  </div>
+
+  <!-- Source filter -->
+  <div class="control-group">
+    <select id="sourceFilter">
+      <option value="">All Sources</option>
+    </select>
+  </div>
+
+  <!-- Time filter -->
+  <div class="control-group">
+    <select id="timeFilter">
+      <option value="today">Today</option>
+      <option value="last-week">Last Week</option>
+      <option value="last-month">Last Month</option>
+      <option value="last-year">Last Year</option>
+      <option value="all-time">All Time</option>
+    </select>
+  </div>
+
 </div>
+
 
 <table id="newsTable"></table>
 
 <button id="backToTopBtn" onclick="scrollToTop()">↑</button>
 
 <script>
-// Global variables for managing data and UI state
 const DATA_URL = "https://umbrella-jam.github.io/regulator/data.json";
 let jsonData = [];
 let filteredData = [];
@@ -165,13 +82,20 @@ let sortState = {};
 let searchTimeout;
 let allVisible = false;
 
-// Function to format dates in a user-friendly format
+// Predefined excluded keywords (can be edited in the input)
+const DEFAULT_EXCLUDED_KEYWORDS = [
+  "sex","gun","murder","drug","methamphetamine","cocaine","firearm",
+  "narcotic","cyberstalk","pornography","kidnapping","assault",
+  "prostitut","fentanyl","shooting"
+];
+
+// Format dates
 function prettyDate(dateStr) {
   const d = new Date(dateStr);
   return d.toLocaleDateString(undefined, { year: "numeric", month: "long", day: "numeric" });
 }
 
-// Function to populate the Source Filter dropdown
+// Populate Source Filter
 function populateSourceFilter() {
   const select = document.getElementById("sourceFilter");
   const sources = [...new Set(jsonData.map(row => row.source))].sort();
@@ -183,164 +107,162 @@ function populateSourceFilter() {
   });
 }
 
-// Function to populate the Time Filter dropdown
-function populateTimeFilter() {
-  const timeFilter = document.getElementById("timeFilter");
-  timeFilter.addEventListener("change", applyFilters);
-}
-
-// Function to filter data by the selected time range
+// Time filtering
 function filterByTimeRange(data, timeRange) {
   const now = new Date();
   return data.filter(row => {
     const pubDate = new Date(row.pubDate);
-    const diffTime = now - pubDate;
-    
-    switch (timeRange) {
-      case "today":
-        return diffTime < 24 * 60 * 60 * 1000; // Within the last 24 hours
-      case "last-week":
-        return diffTime < 7 * 24 * 60 * 60 * 1000; // Within the last week
+    const diff = now - pubDate;
+    switch(timeRange) {
+      case "today": return diff < 24*60*60*1000;
+      case "last-week": return diff < 7*24*60*60*1000;
       case "last-month":
-        return diffTime < 30 * 24 * 60 * 60 * 1000; // Within the last month
+        const lastMonth = new Date(); lastMonth.setMonth(lastMonth.getMonth()-1);
+        return pubDate >= lastMonth;
       case "last-year":
-        return diffTime < 365 * 24 * 60 * 60 * 1000; // Within the last year
-      case "all-time":
-        return true; // No filter, return all
-      default:
-        return true; // No filter, return all
+        const lastYear = new Date(); lastYear.setFullYear(lastYear.getFullYear()-1);
+        return pubDate >= lastYear;
+      case "all-time": return true;
+      default: return true;
     }
   });
 }
 
-// Function to toggle the visibility of all summaries
-function toggleAllSummaries() {
-  allVisible = !allVisible;
-  document.getElementById("toggleAllBtn").textContent = allVisible ? "Hide Summaries" : "Show Summaries";
-  filteredData.forEach((_, index) => {
-    const summaryEl = document.getElementById(`summary-${index}`);
-    if (summaryEl) summaryEl.style.display = allVisible ? "block" : "none";
-  });
-}
-
-// Function to build the news table from filtered data
+// Build table
 function buildTable() {
   const table = document.getElementById("newsTable");
-  let html = `
-    <thead>
-      <tr>
-        <th onclick="sortTable('title')">
-          Title ${sortState.title ? (sortState.title === 'asc' ? '▲' : '▼') : ''}
-        </th>
-        <th onclick="sortTable('pubDate')">
-          Publication Date ${sortState.pubDate ? (sortState.pubDate === 'asc' ? '▲' : '▼') : ''}
-        </th>
-        <th onclick="sortTable('source')">
-          Source ${sortState.source ? (sortState.source === 'asc' ? '▲' : '▼') : ''}
-        </th>
-      </tr>
-    </thead>
-    <tbody>
-  `;
-  filteredData.forEach((row, index) => {
-    html += `
-      <tr>
-        <td>
-            <a href="${row.link}" target="_blank">${row.title}</a>
-            <div class="mobile-meta">${row.source} | ${prettyDate(row.pubDate)}</div>
-            <div class="summary" id="summary-${index}" style="display:${allVisible ? 'block' : 'none'};">
-                ${row.summary}
-            </div>
-        </td>
-        <td>${prettyDate(row.pubDate)}</td>
-        <td>${row.source}</td>
+  if(filteredData.length === 0){
+    table.innerHTML = "<tr><td colspan='3'>No matching articles found.</td></tr>";
+    return;
+  }
+  let html = `<thead>
+    <tr>
+      <th onclick="sortTable('title')">Title ${sortState.title ? (sortState.title==='asc'?'▲':'▼') : ''}</th>
+      <th onclick="sortTable('pubDate')">Publication Date ${sortState.pubDate ? (sortState.pubDate==='asc'?'▲':'▼') : ''}</th>
+      <th onclick="sortTable('source')">Source ${sortState.source ? (sortState.source==='asc'?'▲':'▼') : ''}</th>
+    </tr>
+  </thead><tbody>`;
+  filteredData.forEach((row,index)=>{
+    html += `<tr>
+      <td>
+        <a href="${row.link}" target="_blank">${row.title}</a>
+        <div class="mobile-meta">${row.source} | ${prettyDate(row.pubDate)}</div>
+        <div class="summary" id="summary-${index}" style="display:${allVisible?'block':'none'};">${row.summary}</div>
+      </td>
+      <td>${prettyDate(row.pubDate)}</td>
+      <td>${row.source}</td>
     </tr>`;
   });
   html += "</tbody>";
   table.innerHTML = html;
 }
 
-// Function to apply filters (search, source, and time)
+// Filter by keywords
+function filterByKeywords(data, keywords) {
+  const lowerKeywords = keywords.map(k=>k.toLowerCase());
+  return data.filter(row=>{
+    const text = ((row.title||"")+" "+(row.summary||"")).toLowerCase();
+    return !lowerKeywords.some(kw => text.includes(kw));
+  });
+}
+
+// Apply filters
 function applyFilters() {
   const text = document.getElementById("searchBox").value.toLowerCase();
   const source = document.getElementById("sourceFilter").value;
   const timeRange = document.getElementById("timeFilter").value;
+  const keywordText = document.getElementById("keywordFilter").value.toLowerCase();
+  const keywords = keywordText.split(",").map(k=>k.trim()).filter(k=>k);
 
-  filteredData = jsonData.filter(row => 
-    row.title.toLowerCase().includes(text) &&
-    (source === "" || row.source === source)
-  );
+  filteredData = jsonData.filter(row=>{
+    // Search across title, summary, and link
+    const combinedText = ((row.title||"") + " " + (row.summary||"") + " " + (row.link||"")).toLowerCase();
+    const searchMatch = combinedText.includes(text);
 
-  // Apply time filter
+    const sourceMatch = source === "" || row.source === source;
+    return searchMatch && sourceMatch;
+  });
+
+  // Time filter
   filteredData = filterByTimeRange(filteredData, timeRange);
 
-  if (sortState.activeColumn) {
-    sortTable(sortState.activeColumn, true);
+  // Keyword filter
+  const activeKeywords = keywords.length > 0 ? keywords : DEFAULT_EXCLUDED_KEYWORDS;
+  filteredData = filterByKeywords(filteredData, activeKeywords);
+
+  if(sortState.activeColumn){
+    sortTable(sortState.activeColumn,true);
   } else {
     buildTable();
   }
 }
 
-// Function to handle debouncing for the search input
-function debounceSearch() {
+
+// Debounce search input
+function debounceSearch(){
   clearTimeout(searchTimeout);
   searchTimeout = setTimeout(applyFilters, 300);
 }
 
-// Function to sort the table by a specified column
-function sortTable(column, internal = false) {
-  if (!internal) {
-    sortState[column] = sortState[column] === "asc" ? "desc" : "asc";
+// Sort table
+function sortTable(column, internal=false){
+  if(!internal){
+    sortState[column] = sortState[column]==="asc"?"desc":"asc";
     sortState.activeColumn = column;
   }
   const direction = sortState[column] || "asc";
 
-  filteredData.sort((a, b) => {
-    let valA = a[column];
-    let valB = b[column];
-    if (column === "pubDate") { valA = new Date(valA); valB = new Date(valB); }
-    return direction === "asc" ? (valA > valB ? 1 : -1) : (valA < valB ? 1 : -1);
+  filteredData.sort((a,b)=>{
+    let valA = a[column]; let valB = b[column];
+    if(column==="pubDate"){ valA=new Date(valA); valB=new Date(valB); }
+    if(column==="title"){ valA=valA.toLowerCase(); valB=valB.toLowerCase(); }
+    return direction==="asc" ? (valA>valB?1:-1) : (valA<valB?1:-1);
   });
 
   buildTable();
 }
 
-// Back to top button functionality
-window.onscroll = function() { toggleBackToTop() };
-
-function toggleBackToTop() {
-  const btn = document.getElementById("backToTopBtn");
-  btn.style.display = (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) ? "block" : "none";
+// Toggle summaries
+function toggleAllSummaries(){
+  allVisible = !allVisible;
+  document.getElementById("toggleAllBtn").textContent = allVisible ? "Hide Summaries" : "Show Summaries";
+  filteredData.forEach((_,i)=>{
+    const el = document.getElementById(`summary-${i}`);
+    if(el) el.style.display = allVisible ? "block":"none";
+  });
 }
 
-function scrollToTop() {
-  window.scrollTo({top: 0, behavior: 'smooth'});
+// Back to top
+window.onscroll = function(){ toggleBackToTop(); };
+function toggleBackToTop(){
+  const btn=document.getElementById("backToTopBtn");
+  btn.style.display=(document.body.scrollTop>200||document.documentElement.scrollTop>200)?"block":"none";
 }
+function scrollToTop(){ window.scrollTo({top:0,behavior:'smooth'}); }
 
-// Event listeners for user interactions
+// Event listeners
 document.getElementById("searchBox").addEventListener("input", debounceSearch);
+document.getElementById("keywordFilter").addEventListener("input", debounceSearch);
 document.getElementById("sourceFilter").addEventListener("change", applyFilters);
+document.getElementById("timeFilter").addEventListener("change", applyFilters);
 document.getElementById("toggleAllBtn").addEventListener("click", toggleAllSummaries);
 
-// Fetch and process data from the external JSON file
+// Load data
 fetch(DATA_URL)
-  .then(res => res.json())
-  .then(data => {
+  .then(res=>res.json())
+  .then(data=>{
     jsonData = data;
-    filteredData = [...data];
 
-    // Apply the 'last-week' filter immediately on load
-    filteredData = filterByTimeRange(filteredData, 'last-week');
+    // Set default excluded keywords in input
+    document.getElementById("keywordFilter").value = DEFAULT_EXCLUDED_KEYWORDS.join(",");
 
+    applyFilters(); // Applies default filters immediately
     populateSourceFilter();
-    populateTimeFilter();
-    buildTable();
   })
-  .catch(err => {
-    document.getElementById("newsTable").innerHTML = "<tr><td>Error loading data</td></tr>";
+  .catch(err=>{
+    document.getElementById("newsTable").innerHTML="<tr><td>Error loading data</td></tr>";
     console.error(err);
   });
-
 </script>
 
 </body>
