@@ -1,5 +1,19 @@
 [
   {
+    "title": "UBS Financial Services Inc.",
+    "link": "https://www.sec.gov/files/litigation/admin/2026/34-106026.pdf",
+    "pubDate": "Mon, 03 Aug 2026 09:00:00 -0400",
+    "summary": "UBS Financial Services Inc.",
+    "source": "SEC Administrative"
+  },
+  {
+    "title": "BATON ROUGE MAN PLEADS GUILTY TO RECEIPT OF CHILD PORNOGRAPHY",
+    "link": "https://www.justice.gov/usao-mdla/pr/baton-rouge-man-pleads-guilty-receipt-child-pornography",
+    "pubDate": "Mon, 03 Aug 2026 12:00:00 +0000",
+    "summary": "Jonathan Isaac Gibbs, age 26, of Baton Rouge, Louisiana, pleaded guilty before United States District Judge John W. deGravelles to receipt of child pornography, announced U.S. Attorney Kurt L. Wall.",
+    "source": "DOJ"
+  },
+  {
     "title": "Fentanyl Trafficker Gets 15‑Year Federal Sentence",
     "link": "https://www.justice.gov/usao-ednc/pr/fentanyl-trafficker-gets-15-year-federal-sentence",
     "pubDate": "Sun, 02 Aug 2026 12:00:00 +0000",
@@ -634,6 +648,13 @@
     "link": "https://www.justice.gov/usao-sdwv/pr/united-states-attorney-moore-capito-encourages-turn-out-national-night-out-tuesday",
     "pubDate": "Fri, 31 Jul 2026 12:00:00 +0000",
     "summary": "",
+    "source": "DOJ"
+  },
+  {
+    "title": "Former Edison City Clerk Faces 10 Years in Prison for Federal Program Fraud",
+    "link": "https://www.justice.gov/usao-mdga/pr/former-edison-city-clerk-faces-10-years-prison-federal-program-fraud",
+    "pubDate": "Fri, 31 Jul 2026 12:00:00 +0000",
+    "summary": "ALBANY, Ga. – The Former City Clerk of Edison, Georgia, admitted in federal court this week that she used taxpayer money for personal purchases following an investigation into the mismanagement of City finances, resulting from a National Fraud Enforcement Division investigation led by the FBI.",
     "source": "DOJ"
   },
   {
@@ -128473,6 +128494,13 @@
   {
     "title": "Talk to your friends and family to fight fraud",
     "link": "https://consumer.ftc.gov/node/335068",
+    "summary": "",
+    "pubDate": "2022-04-13T10:02:00Z",
+    "source": "FTC"
+  },
+  {
+    "title": "Have you lost money to a scam? Watch for scammers who say they can help",
+    "link": "https://consumer.ftc.gov/node/335176",
     "summary": "",
     "pubDate": "2022-04-13T10:02:00Z",
     "source": "FTC"
