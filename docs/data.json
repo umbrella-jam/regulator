@@ -7,6 +7,13 @@
     "source": "FTC"
   },
   {
+    "title": "United Parcel Service, Inc.",
+    "link": "https://www.sec.gov/files/litigation/admin/2026/34-106125.pdf",
+    "pubDate": "Thu, 13 Aug 2026 11:20:00 -0400",
+    "summary": "United Parcel Service, Inc.",
+    "source": "SEC Administrative"
+  },
+  {
     "title": "New Jersey Man Pleads Guilty to Accessing Child Sexual Abuse Material",
     "link": "https://www.justice.gov/opa/pr/new-jersey-man-pleads-guilty-accessing-child-sexual-abuse-material",
     "pubDate": "Thu, 13 Aug 2026 12:00:00 +0000",
@@ -84,13 +91,6 @@
     "source": "SEC Administrative"
   },
   {
-    "title": "Ryan Financial Advisors, Inc.",
-    "link": "https://www.sec.gov/files/litigation/admin/2026/34-106099.pdf",
-    "pubDate": "Wed, 12 Aug 2026 18:27:07 -0400",
-    "summary": "Ryan Financial Advisors, Inc.",
-    "source": "SEC Administrative"
-  },
-  {
     "title": "Transamerica Financial Advisors, LLC",
     "link": "https://www.sec.gov/files/litigation/admin/2026/34-106120.pdf",
     "pubDate": "Wed, 12 Aug 2026 18:19:33 -0400",
@@ -105,17 +105,45 @@
     "source": "SEC Administrative"
   },
   {
-    "title": "Kestra Private Wealth Services, LLC",
-    "link": "https://www.sec.gov/files/litigation/admin/2026/34-106110.pdf",
-    "pubDate": "Wed, 12 Aug 2026 18:12:38 -0400",
-    "summary": "Kestra Private Wealth Services, LLC",
-    "source": "SEC Administrative"
-  },
-  {
     "title": "Private Portfolio, Inc.",
     "link": "https://www.sec.gov/files/litigation/admin/2026/34-106113.pdf",
     "pubDate": "Wed, 12 Aug 2026 17:49:19 -0400",
     "summary": "Private Portfolio, Inc.",
+    "source": "SEC Administrative"
+  },
+  {
+    "title": "Kestra Private Wealth Services, LLC",
+    "link": "https://www.sec.gov/files/litigation/admin/2026/34-106110.pdf",
+    "pubDate": "Wed, 12 Aug 2026 17:48:38 -0400",
+    "summary": "Kestra Private Wealth Services, LLC",
+    "source": "SEC Administrative"
+  },
+  {
+    "title": "Equity Services, Inc.",
+    "link": "https://www.sec.gov/files/litigation/admin/2026/34-106104.pdf",
+    "pubDate": "Wed, 12 Aug 2026 16:59:19 -0400",
+    "summary": "Equity Services, Inc.",
+    "source": "SEC Administrative"
+  },
+  {
+    "title": "Cantella  Co. Inc.",
+    "link": "https://www.sec.gov/files/litigation/admin/2026/34-106102.pdf",
+    "pubDate": "Wed, 12 Aug 2026 16:58:53 -0400",
+    "summary": "Cantella amp; Co. Inc.",
+    "source": "SEC Administrative"
+  },
+  {
+    "title": "Beacon Investment Management LLC",
+    "link": "https://www.sec.gov/files/litigation/admin/2026/34-106101.pdf",
+    "pubDate": "Wed, 12 Aug 2026 16:57:10 -0400",
+    "summary": "Beacon Investment Management LLC",
+    "source": "SEC Administrative"
+  },
+  {
+    "title": "Ryan Financial Advisors, Inc.",
+    "link": "https://www.sec.gov/files/litigation/admin/2026/34-106099.pdf",
+    "pubDate": "Wed, 12 Aug 2026 16:56:07 -0400",
+    "summary": "Ryan Financial Advisors, Inc.",
     "source": "SEC Administrative"
   },
   {
@@ -144,6 +172,13 @@
     "link": "https://www.sec.gov/files/litigation/admin/2026/34-106094.pdf",
     "pubDate": "Wed, 12 Aug 2026 16:22:04 -0400",
     "summary": "D.A. Davidson amp; Co.",
+    "source": "SEC Administrative"
+  },
+  {
+    "title": "Infinex Investments, Inc.",
+    "link": "https://www.sec.gov/files/litigation/admin/2026/34-106090.pdf",
+    "pubDate": "Wed, 12 Aug 2026 15:19:28 -0400",
+    "summary": "Infinex Investments, Inc.",
     "source": "SEC Administrative"
   },
   {
@@ -133399,6 +133434,13 @@
     "source": "FTC"
   },
   {
+    "title": "Struggling with tax debt? Here’s what to know",
+    "link": "https://consumer.ftc.gov/node/335502",
+    "summary": "",
+    "pubDate": "2022-04-13T10:02:00Z",
+    "source": "FTC"
+  },
+  {
     "title": "Byron Center resident pleads guilty to tax evasion",
     "link": "https://www.irs.gov/compliance/criminal-investigation/byron-center-resident-pleads-guilty-to-tax-evasion",
     "pubDate": "",
@@ -140639,6 +140681,13 @@
   {
     "title": "Two individuals sentenced for their roles in transnational fraud scheme targeting elderly victims",
     "link": "https://www.irs.gov/compliance/criminal-investigation/two-individuals-sentenced-for-their-roles-in-transnational-fraud-scheme-targeting-elderly-victims",
+    "pubDate": "",
+    "summary": "",
+    "source": "IRS Criminal Investigation"
+  },
+  {
+    "title": "IRS-CI links illegal gambling offenses to $126 million in laundered funds",
+    "link": "https://www.irs.gov/compliance/criminal-investigation/irs-ci-links-illegal-gambling-offenses-to-126-million-in-laundered-funds",
     "pubDate": "",
     "summary": "",
     "source": "IRS Criminal Investigation"
