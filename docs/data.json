@@ -1,5 +1,691 @@
 [
   {
+    "title": "Cary Edward Urich",
+    "link": "https://www.sec.gov/enforcement-litigation/litigation-releases/lr-26681",
+    "pubDate": "Fri, 30 Oct 2026 16:59:50 -0400",
+    "summary": "Cary Edward Urich",
+    "source": "SEC Litigation"
+  },
+  {
+    "title": "Bran Crudden and Transparent Equity Entrepreneurs, LLC",
+    "link": "https://www.sec.gov/enforcement-litigation/litigation-releases/lr-26680",
+    "pubDate": "Fri, 30 Oct 2026 16:42:20 -0400",
+    "summary": "Bran Crudden and Transparent Equity Entrepreneurs, LLC",
+    "source": "SEC Litigation"
+  },
+  {
+    "title": "United Planners’ Financial Services of America A Limited Partner",
+    "link": "https://www.sec.gov/files/litigation/admin/2026/ia-7033.pdf",
+    "pubDate": "Fri, 30 Oct 2026 14:53:21 -0400",
+    "summary": "United Planners’ Financial Services of America A Limited Partner",
+    "source": "SEC Administrative"
+  },
+  {
+    "title": "Snowden Capital Advisors LLC",
+    "link": "https://www.sec.gov/files/litigation/admin/2026/ia-7031.pdf",
+    "pubDate": "Fri, 30 Oct 2026 10:24:46 -0400",
+    "summary": "Snowden Capital Advisors LLC",
+    "source": "SEC Administrative"
+  },
+  {
+    "title": "BG Wealth Sharing Ltd and DSJ Exchange Pty Ltd",
+    "link": "https://www.sec.gov/enforcement-litigation/litigation-releases/lr-26679",
+    "pubDate": "Fri, 30 Oct 2026 09:32:46 -0400",
+    "summary": "BG Wealth Sharing Ltd and DSJ Exchange Pty Ltd",
+    "source": "SEC Litigation"
+  },
+  {
+    "title": "Botox Fraud Doctor Sentenced to 15 Years in Prison for $45M Medicare Scheme",
+    "link": "https://www.justice.gov/opa/pr/botox-fraud-doctor-sentenced-15-years-prison-45m-medicare-scheme",
+    "pubDate": "Fri, 30 Oct 2026 12:00:00 +0000",
+    "summary": "California doctor Violetta Mailyan was sentenced yesterday to 15 years in prison for using her medical practice to fraudulently bill Medicare more than $45 million for Botox injection services that were medically unnecessary and never provided.&nbsp;&nbsp;",
+    "source": "DOJ"
+  },
+  {
+    "title": "Justice Department’s Statement on Its Investigation of Vistra’s Acquisition of Cogentrix",
+    "link": "https://www.justice.gov/opa/pr/justice-departments-statement-its-investigation-vistras-acquisition-cogentrix",
+    "pubDate": "Fri, 30 Oct 2026 12:00:00 +0000",
+    "summary": "Associate Attorney General Stanley E. Woodward, Jr. of the U.S. Department of Justice issued the following statement today in connection with the Antitrust Division’s investigation into the acquisition of Cogentrix Energy (Cogentrix) by Vistra Corp. (Vistra) (together, the “Parties”):",
+    "source": "DOJ"
+  },
+  {
+    "title": "Justice Department Announces Final Rule Allowing Federal Firearms Licensees to Voluntarily Use NICS for Employee Background Checks",
+    "link": "https://www.justice.gov/opa/pr/justice-department-announces-final-rule-allowing-federal-firearms-licensees-voluntarily-use",
+    "pubDate": "Fri, 30 Oct 2026 12:00:00 +0000",
+    "summary": "Today, the Department of Justice announced a final rule authorizing Federal Firearms Licensees (FFLs) to voluntarily use the FBI's National Instant Criminal Background Check System (NICS) to conduct background checks on certain current and prospective employees.",
+    "source": "DOJ"
+  },
+  {
+    "title": "Two Men Sentenced for Acting as Agents of the People’s Republic of China",
+    "link": "https://www.justice.gov/opa/pr/two-men-sentenced-acting-agents-peoples-republic-china",
+    "pubDate": "Fri, 30 Oct 2026 12:00:00 +0000",
+    "summary": "",
+    "source": "DOJ"
+  },
+  {
+    "title": "Indian National Pleads Guilty to $227M Medicare Fraud",
+    "link": "https://www.justice.gov/opa/pr/indian-national-pleads-guilty-227m-medicare-fraud",
+    "pubDate": "Fri, 30 Oct 2026 12:00:00 +0000",
+    "summary": "An Indian national pleaded guilty today to a $227 million Medicare fraud scheme in which hundreds of thousands of Medicare beneficiaries’ personally identifiable information was purchased from a company based in Pakistan and used to bill Medicare for COVID-19 test kits that were never provided.",
+    "source": "DOJ"
+  },
+  {
+    "title": "Israeli National Extradited to Face Charges for Stealing Nearly $3M in Virtual Currency Heist",
+    "link": "https://www.justice.gov/opa/pr/israeli-national-extradited-face-charges-stealing-nearly-3m-virtual-currency-heist",
+    "pubDate": "Fri, 30 Oct 2026 12:00:00 +0000",
+    "summary": "Alexander Gurevich, 49, an Israeli national, had his initial appearance today in the Northern District of California on a 2023 indictment that charged him for exploiting the Nomad Bridge’s self-executing computer program, also known as a smart contract, to steal $2.89 million in virtual currency.",
+    "source": "DOJ"
+  },
+  {
+    "title": "California Man Pleads Guilty to Attempting to Provide Material Support to the Islamic State of Iraq and al-Sham",
+    "link": "https://www.justice.gov/opa/pr/california-man-pleads-guilty-attempting-provide-material-support-islamic-state-iraq-and-al",
+    "pubDate": "Fri, 30 Oct 2026 12:00:00 +0000",
+    "summary": "Ammaad Akhtar, 34, of California, pleaded guilty today to attempting to provide material support to a designated foreign terrorist organization.",
+    "source": "DOJ"
+  },
+  {
+    "title": "DOJ’s Fraud Division and the U.S. Attorney’s Office for the District Minnesota Uncover Nearly $30M in Benefits Fraud in Enforcement Surge",
+    "link": "https://www.justice.gov/opa/pr/dojs-fraud-division-and-us-attorneys-office-district-minnesota-uncover-voter-fraud-and",
+    "pubDate": "Fri, 30 Oct 2026 12:00:00 +0000",
+    "summary": "The Justice Department’s National Fraud Enforcement Division (Fraud Division), and the U.S. Attorney’s Office for the District of Minnesota announced a series of enforcement actions targeting fraud involving taxpayer-funded Medicaid and SNAP programs.",
+    "source": "DOJ"
+  },
+  {
+    "title": "Justice Department Announces Nearly $300 Million in Awards to Four Model Cities to Combat Violent Crime and Restore Law and Order",
+    "link": "https://www.justice.gov/opa/pr/justice-department-announces-nearly-300-million-awards-four-model-cities-combat-violent",
+    "pubDate": "Fri, 30 Oct 2026 12:00:00 +0000",
+    "summary": "Today, the Justice Department announced the selection of four jurisdictions to receive nearly $300 million in federal funding through its Model Cities Initiative (MCI), a flagship effort to reduce violent crime, restore law and order, and strengthen public safety in American communities.",
+    "source": "DOJ"
+  },
+  {
+    "title": "Justice Department Announces Issuance of Federal Registrations for Medical Marijuana Dispensaries",
+    "link": "https://www.justice.gov/opa/pr/justice-department-announces-issuance-federal-registrations-medical-marijuana-dispensaries",
+    "pubDate": "Fri, 30 Oct 2026 12:00:00 +0000",
+    "summary": "The U.S. Department of Justice today announced that the U.S. Drug Enforcement Administration (DEA) is moving forward with the initial issuance of hundreds of federal registrations to qualifying state-licensed medical marijuana dispensaries under the <a href=\"https://urldefense.us/v3/__https:/links-1.govdelivery.com/CL0/https:*2F*2Fwww.justice.gov*2Fopa*2Fpr*2Fjustice-department-places-fda-approved-marijuana-products-and-products-containing-marijuana*3Futm_medium=email*26utm_source=govdelivery/1/010001a18de93aa3-fab92374-d243-4d0a-a6e0-e621f3545b13-000000/sYhC3QY32S-L41fqkkop1y_5i3dqt3LHcZs36EI1wOE=452__;JSUlJSUlJQ!!KDHJTnLT9htas3gmAhw!ZTS86FskWXl_mGPu7RpuiVAfMQKb9nzrh1pkok3Yx7DjZN_Jqr7SNPoa-fCHY_RRMD6Ogd6aICsI2_BU8kNDZp2Fz0aN2p2cQ5lEe9rHHe9M$\">Attorney General’s order</a> implementing Schedule III controls for certain medical marijuana activities.",
+    "source": "DOJ"
+  },
+  {
+    "title": "Justice Department Defends the Navy’s Actions to Address a Fuel Release at Joint Base Pearl Harbor-Hickam in Hawaii",
+    "link": "https://www.justice.gov/opa/pr/justice-department-defends-navys-actions-address-fuel-release-joint-base-pearl-harbor-hickam",
+    "pubDate": "Fri, 30 Oct 2026 12:00:00 +0000",
+    "summary": "The U.S. District Court for the District of Hawaii earlier this week ruled that the U.S. Navy is not in violation of the Clean Water Act after it reviewed the Navy’s response to fuel releases in 2020 and 2021 at Joint Base Pearl Harbor-Hickam on Oahu, Hawaii, and other substantial improvements the Navy has made in the fueling infrastructure and operations. The ruling follows a bench trial that was held earlier this year regarding claims that the Navy is in violation of the Clean Water Act at the Joint Base.",
+    "source": "DOJ"
+  },
+  {
+    "title": "Former Correctional Officer Sentenced on Federal Civil Rights Charges in Connection with Conspiracy to Violate Inmates’ Rights at West Virginia Jail",
+    "link": "https://www.justice.gov/opa/pr/former-correctional-officer-sentenced-federal-civil-rights-charges-connection-conspiracy",
+    "pubDate": "Fri, 30 Oct 2026 12:00:00 +0000",
+    "summary": "A former correctional officer from the Southern Regional Jail in Beaver, West Virginia, was sentenced today to 24 months in prison for his role in a conspiracy in which he and other correctional officers used unreasonable and unjustified force against inmates, including pretrial detainees, as a form of punishment and retaliation. Michael Pack, 40, pleaded guilty on March 30 before U.S. Magistrate Judge Omar J. Aboulhosn to one count of violating 18 U.S.C. § 371.",
+    "source": "DOJ"
+  },
+  {
+    "title": "Former U.S. Government Contractor Arrested for Allegedly Leaking National Defense Information and Stealing Night Vision Goggles",
+    "link": "https://www.justice.gov/opa/pr/former-us-government-contractor-arrested-allegedly-leaking-national-defense-information-and",
+    "pubDate": "Fri, 30 Oct 2026 12:00:00 +0000",
+    "summary": "James Thomas&nbsp;Ashbacher, 37, of Spring Lake, North Carolina, a former U.S. government contractor, was arrested by the FBI on Tuesday for allegedly leaking national defense information by posting the information on a popular social media site, unlawfully retaining other national defense information at his residence, and stealing night vision goggles from the U.S. Army’s Special Operations Command.",
+    "source": "DOJ"
+  },
+  {
+    "title": "Former BizJet Sales Manager Pleads Guilty to Foreign Bribery",
+    "link": "https://www.justice.gov/opa/pr/former-bizjet-sales-manager-pleads-guilty-foreign-bribery",
+    "pubDate": "Fri, 30 Oct 2026 12:00:00 +0000",
+    "summary": "Jald Jensen, 73, of Panama City, and previously of Van Nuys, California, a former sales manager of BizJet International Sales and Support Inc. (BizJet), pleaded guilty yesterday for his role in connection with a scheme to pay bribes to government officials in Latin America to secure business for BizJet.&nbsp;",
+    "source": "DOJ"
+  },
+  {
+    "title": "Dominican National Pleads Guilty to Receiving Over $24,000 in SNAP Benefits",
+    "link": "https://www.justice.gov/usao-ma/pr/dominican-national-pleads-guilty-receiving-over-24000-snap-benefits",
+    "pubDate": "Fri, 30 Oct 2026 12:00:00 +0000",
+    "summary": "BOSTON – A Boston man, who was born in the Dominican Republic and is a Lawful Permanent Resident, pleaded guilty today in federal court in Boston to stealing the identity of a U.S. citizen from Puerto Rico and using the stolen identity to obtain more than $20,000 in federally funded benefits from Massachusetts.",
+    "source": "DOJ"
+  },
+  {
+    "title": "H Block Gang Member Pleads Guilty to Drug Conspiracy",
+    "link": "https://www.justice.gov/usao-ma/pr/h-block-gang-member-pleads-guilty-drug-conspiracy-1",
+    "pubDate": "Fri, 30 Oct 2026 12:00:00 +0000",
+    "summary": "BOSTON – A member of the violent Boston-based gang, H-Block, has pleaded guilty in federal court in Boston to drug conspiracy charges.",
+    "source": "DOJ"
+  },
+  {
+    "title": "Lawrence Man Pleads Guilty to Conspiring to Manufacture and Distribute Counterfeit Pills",
+    "link": "https://www.justice.gov/usao-ma/pr/lawrence-man-pleads-guilty-conspiring-manufacture-and-distribute-counterfeit-pills-0",
+    "pubDate": "Fri, 30 Oct 2026 12:00:00 +0000",
+    "summary": "BOSTON – A Lawrence, Mass. man pleaded guilty in federal court in Boston to his involvement in a drug trafficking organization (DTO). Over eighteen kilograms of suspected controlled substances and a pill press were recovered.",
+    "source": "DOJ"
+  },
+  {
+    "title": "Former Veterans Affairs Employee Sentenced for Fraudulently Obtaining Multiple Covid-19 Benefits",
+    "link": "https://www.justice.gov/usao-ma/pr/former-veterans-affairs-employee-sentenced-fraudulently-obtaining-multiple-covid-19",
+    "pubDate": "Fri, 30 Oct 2026 12:00:00 +0000",
+    "summary": "BOSTON – A Brockton woman, who was employed as a Medical Technician with the U.S. Department of Veterans Affairs, has been sentenced in federal court in Boston for wire fraud.",
+    "source": "DOJ"
+  },
+  {
+    "title": "Malden Man Pleads Guilty to Drug Trafficking Conspiracy",
+    "link": "https://www.justice.gov/usao-ma/pr/malden-man-pleads-guilty-drug-trafficking-conspiracy-0",
+    "pubDate": "Fri, 30 Oct 2026 12:00:00 +0000",
+    "summary": "BOSTON – A Malden man has pleaded guilty in federal court in Boston to his role in a conspiracy to distribute methamphetamine.",
+    "source": "DOJ"
+  },
+  {
+    "title": "Florida Man Charged with Securities Fraud",
+    "link": "https://www.justice.gov/usao-ndal/pr/florida-man-charged-securities-fraud",
+    "pubDate": "Fri, 30 Oct 2026 12:00:00 +0000",
+    "summary": "",
+    "source": "DOJ"
+  },
+  {
+    "title": "Maryland Man Convicted at Trial on Child Exploitation Charges",
+    "link": "https://www.justice.gov/usao-ndal/pr/maryland-man-convicted-trial-child-exploitation-charges",
+    "pubDate": "Fri, 30 Oct 2026 12:00:00 +0000",
+    "summary": "",
+    "source": "DOJ"
+  },
+  {
+    "title": "Man Sentenced to 210 months for Distributing Child Sex Abuse Material",
+    "link": "https://www.justice.gov/usao-sdal/pr/man-sentenced-210-months-distributing-child-sex-abuse-material",
+    "pubDate": "Fri, 30 Oct 2026 12:00:00 +0000",
+    "summary": "MOBILE, AL – A Talladega man was sentenced today to 210 months in federal prison for distributing child sex abuse material.&nbsp;&nbsp;",
+    "source": "DOJ"
+  },
+  {
+    "title": "Illegal Alien Sentenced to 25 Years for Drug Trafficking Crimes",
+    "link": "https://www.justice.gov/usao-sdal/pr/illegal-alien-sentenced-25-years-drug-trafficking-crimes",
+    "pubDate": "Fri, 30 Oct 2026 12:00:00 +0000",
+    "summary": "MOBILE, AL – Two illegal aliens, Adan Ubaldo Sepulveda-Ruiz (39), and Juan Ali Popoca-Flores (42), both citizens of Mexico, were sentenced in federal court to lengthy prison terms for their roles in a large-scale drug trafficking operation.",
+    "source": "DOJ"
+  },
+  {
+    "title": "O.C. Mexican Mafia Leader, Two Other Gangsters Federally Charged with Christmas 2016 San Juan Capistrano Murder",
+    "link": "https://www.justice.gov/usao-cdca/pr/oc-mexican-mafia-leader-two-other-gangsters-federally-charged-christmas-2016-san-juan",
+    "pubDate": "Fri, 30 Oct 2026 12:00:00 +0000",
+    "summary": "An incarcerated reputed leader of the Orange County Mexican Mafia and two of his gang associates have been charged in a superseding indictment with the murder in San Juan Capistrano of a victim who was killed in his home on Christmas morning 2016, the Justice Department announced today.",
+    "source": "DOJ"
+  },
+  {
+    "title": "Anaheim Woman Federally Charged with Animal Crushing for Allegedly Luring Puppy Under Her Minivan Then Driving Over It",
+    "link": "https://www.justice.gov/usao-cdca/pr/anaheim-woman-federally-charged-animal-crushing-allegedly-luring-puppy-under-her",
+    "pubDate": "Fri, 30 Oct 2026 12:00:00 +0000",
+    "summary": "An Orange County woman has been charged in a federal criminal complaint with intentionally killing a pit bull puppy by placing food under her minivan to lure it underneath the vehicle, then driving the minivan forward onto the puppy, subjecting it to extreme physical pain and death, the Justice Department announced today.",
+    "source": "DOJ"
+  },
+  {
+    "title": "Stockton man pleads guilty to attempting to provide material support to the Islamic State of Iraq and Al-Sham",
+    "link": "https://www.justice.gov/usao-edca/pr/stockton-man-pleads-guilty-attempting-provide-material-support-islamic-state-iraq-and",
+    "pubDate": "Fri, 30 Oct 2026 12:00:00 +0000",
+    "summary": "Ammaad Akhtar, 34, of Stockton, pleaded guilty today to attempting to provide material support to a designated foreign terrorist organization.",
+    "source": "DOJ"
+  },
+  {
+    "title": "Stamford Man Sentenced to Additional Prison Time for Distributing Crack Prior to Reporting to Prison",
+    "link": "https://www.justice.gov/usao-ct/pr/stamford-man-sentenced-additional-prison-time-distributing-crack-prior-reporting-prison",
+    "pubDate": "Fri, 30 Oct 2026 12:00:00 +0000",
+    "summary": "DANNY TURKVAN, also known as “Smooth” 55, of Stamford, was sentenced today by U.S. District Judge Stefan R. Underhill in Bridgeport to an additional 14 months of imprisonment for distributing crack cocaine after he had been sentenced in another federal case and prior to reporting to prison.",
+    "source": "DOJ"
+  },
+  {
+    "title": "Homeland Security Task Force:  Two Connecticut Men Found with 21 Kilos of Cocaine Sentenced to 10 Years in Federal Prison",
+    "link": "https://www.justice.gov/usao-ct/pr/homeland-security-task-force-two-connecticut-men-found-21-kilos-cocaine-sentenced-10-0",
+    "pubDate": "Fri, 30 Oct 2026 12:00:00 +0000",
+    "summary": "REGINALD ROGERS 38, of Woodbridge, and LESTER ARRINGTON, 34, of Naugatuck, have each been sentenced by U.S. District Judge Stefan R. Underhill in Bridgeport to 120 months of imprisonment and five years of supervised release for trafficking cocaine.&nbsp; Rogers was sentenced today and Arrington was sentenced on October 27.",
+    "source": "DOJ"
+  },
+  {
+    "title": "Antiques and Art Dealer Sentenced to More Than 5 Years in Federal Prison for $2.1 Million Theft Scheme",
+    "link": "https://www.justice.gov/usao-ct/pr/antiques-and-art-dealer-sentenced-more-5-years-federal-prison-21-million-theft-scheme",
+    "pubDate": "Fri, 30 Oct 2026 12:00:00 +0000",
+    "summary": "DAVID L. JOHNSON, 67, of Greenwich, was sentenced today by U.S. District Judge Michael P. Shea in Hartford to 66 months of imprisonment and three years of supervised release for stealing more than $2 million from an elderly victim and his estate.",
+    "source": "DOJ"
+  },
+  {
+    "title": "Honduran National Pleads Guilty to Illegally Reentering U.S.",
+    "link": "https://www.justice.gov/usao-ct/pr/honduran-national-pleads-guilty-illegally-reentering-us",
+    "pubDate": "Fri, 30 Oct 2026 12:00:00 +0000",
+    "summary": "RUDY ANTONYS BARRIENTOS-AVILA, 38, a citizen of Honduras, waived his right to be indicted and pleaded guilty today before U.S. District Judge Sarah F. Russell in New Haven to unlawful reentry of a removed alien.",
+    "source": "DOJ"
+  },
+  {
+    "title": "Bronx Man Sentenced to Federal Prison for Mail Theft Offenses",
+    "link": "https://www.justice.gov/usao-ct/pr/bronx-man-sentenced-federal-prison-mail-theft-offenses",
+    "pubDate": "Fri, 30 Oct 2026 12:00:00 +0000",
+    "summary": "TULIO NUNEZ, 25, of the Bronx, New York, was sentenced today by U.S. District Judge Janet C. Hall in New Haven to six months of imprisonment and two years of supervised release for offenses related to the theft of U.S. Mail.",
+    "source": "DOJ"
+  },
+  {
+    "title": "Previously Convicted D.C. Man Sentenced to 45 Years for the 2022 Murder of His Children’s Mother",
+    "link": "https://www.justice.gov/usao-dc/pr/previously-convicted-dc-man-sentenced-45-years-2022-murder-his-childrens-mother",
+    "pubDate": "Fri, 30 Oct 2026 12:00:00 +0000",
+    "summary": "Wonell Jones, Jr., 38, of Washington, D.C., was sentenced today to forty-five years in prison, on charges related to the death of 33-year-old Audora Williams, in July 2022, announced U.S. Attorney Jeanine Ferris Pirro.&nbsp;",
+    "source": "DOJ"
+  },
+  {
+    "title": "Federal Jury Finds Slovakian National Guilty of Voter Fraud",
+    "link": "https://www.justice.gov/usao-mdfl/pr/federal-jury-finds-slovakian-national-guilty-voter-fraud",
+    "pubDate": "Fri, 30 Oct 2026 12:00:00 +0000",
+    "summary": "Orlando, Florida – A federal jury has found Peter Holly, a 39-year-old lawful permanent resident, guilty of making a false claim of U.S. citizenship in order to register to vote and voting by an alien.&nbsp;Holly faces a maximum penalty of&nbsp;five years in federal prison; a sentencing date has not yet been set.&nbsp;He was indicted on&nbsp;January 28, 2026. U.S. Attorney Gregory W. Kehoe made the announcement.",
+    "source": "DOJ"
+  },
+  {
+    "title": "Federal Jury Convicts Georgia Felon for Illegal Possession of a Firearm",
+    "link": "https://www.justice.gov/usao-ndfl/pr/federal-jury-convicts-georgia-felon-illegal-possession-firearm",
+    "pubDate": "Fri, 30 Oct 2026 12:00:00 +0000",
+    "summary": "<strong>Tallahassee, Florida</strong>&nbsp;– Jonathan Deon Morehead, 38, of Atlanta, Georgia, was found guilty by a federal jury in Tallahassee following a trial for possession of a firearm by a convicted felon. The verdict was announced by John P. Heekin, United States Attorney for the Northern District of Florida.&nbsp;",
+    "source": "DOJ"
+  },
+  {
+    "title": "Pensacola Felon Indicted on Federal Firearm & Machinegun Charges",
+    "link": "https://www.justice.gov/usao-ndfl/pr/pensacola-felon-indicted-federal-firearm-machinegun-charges",
+    "pubDate": "Fri, 30 Oct 2026 12:00:00 +0000",
+    "summary": "<strong>Pensacola, Florida</strong>&nbsp;– Trenton Demarquis Jenkins, 21, of Pensacola, Florida, has been indicted in federal court on one count of possessing a firearm and ammunition as a convicted felon, one count of possessing a machinegun, and one count of possessing an unregistered firearm. John P. Heekin, United States Attorney for the Northern District of Florida, announced the charges.",
+    "source": "DOJ"
+  },
+  {
+    "title": "Southport Man Pleads Guilty to Transportation of Child Pornography",
+    "link": "https://www.justice.gov/usao-ndfl/pr/southport-man-pleads-guilty-transportation-child-pornography",
+    "pubDate": "Fri, 30 Oct 2026 12:00:00 +0000",
+    "summary": "<strong>Tallahassee, Florida</strong> – John Massimiani, III, 66, of Southport, Florida, pleaded guilty in federal court to&nbsp;one count of transportation of child pornography and one count of destruction or removal of property to prevent seizure. The plea was announced by John P. Heekin, United States Attorney for the Northern District of Florida.&nbsp;",
+    "source": "DOJ"
+  },
+  {
+    "title": "South Florida Selected as First Pilot Location for National Initiative to Combat Federal Nutrition Assistance Fraud",
+    "link": "https://www.justice.gov/usao-sdfl/pr/south-florida-selected-first-pilot-location-national-initiative-combat-federal-0",
+    "pubDate": "Fri, 30 Oct 2026 12:00:00 +0000",
+    "summary": "U.S. Attorney Jason A. Reding Quiñones for the Southern District of Florida today joined U.S. Department of Agriculture (USDA) Inspector General John Walk and federal, state, and local law enforcement partners to launch the Hunger Assistance Enforcement and Accountability Teams (HEAT) initiative, a coordinated effort to investigate and prosecute fraud involving federal nutrition assistance programs. South Florida will serve as the first pilot location for the national initiative, underscoring the U.S. Attorney’s Office’s commitment to protecting taxpayer-funded assistance programs and holding accountable those who exploit resources intended for vulnerable Americans.",
+    "source": "DOJ"
+  },
+  {
+    "title": "Hollywood Store Owner Charged in $500,000 SNAP Benefits Fraud Scheme",
+    "link": "https://www.justice.gov/usao-sdfl/pr/hollywood-store-owner-charged-500000-snap-benefits-fraud-scheme",
+    "pubDate": "Fri, 30 Oct 2026 12:00:00 +0000",
+    "summary": "A Hollywood convenience store owner has been charged in connection with a years-long scheme to defraud the Supplemental Nutrition Assistance Program (SNAP) by purchasing more than $500,000 for cash and using the benefits to buy merchandise for resale.&nbsp;",
+    "source": "DOJ"
+  },
+  {
+    "title": "Leader of South Georgia Check‑Theft and Forgery Scheme Sentenced to Prison",
+    "link": "https://www.justice.gov/usao-mdga/pr/leader-south-georgia-check-theft-and-forgery-scheme-sentenced-prison",
+    "pubDate": "Fri, 30 Oct 2026 12:00:00 +0000",
+    "summary": "ALBANY, Ga. – A Thomasville, Georgia, man who directed a $115,000 check theft and forgery scheme in the region has been sentenced to federal prison. “Stealing checks and forging financial documents is not a victimless crime. These types of schemes siphon money from hardworking individuals and local businesses, causing real financial harm across our communities,” said U.S. Attorney William R. “Will” Keyes. “Thanks to the outstanding work of our federal and local law enforcement partners, this conspiracy has been dismantled, and those responsible are being held accountable.”&nbsp;",
+    "source": "DOJ"
+  },
+  {
+    "title": "Savannah man convicted for drug trafficking charges",
+    "link": "https://www.justice.gov/usao-sdga/pr/savannah-man-convicted-drug-trafficking-charges",
+    "pubDate": "Fri, 30 Oct 2026 12:00:00 +0000",
+    "summary": "A Savannah man already on federal supervised release has been convicted for possession of multiple controlled substances.",
+    "source": "DOJ"
+  },
+  {
+    "title": "Chinese nationals sentenced to prison for operating illicit massage businesses in southern Illinois",
+    "link": "https://www.justice.gov/usao-sdil/pr/chinese-nationals-sentenced-prison-operating-illicit-massage-businesses-southern",
+    "pubDate": "Fri, 30 Oct 2026 12:00:00 +0000",
+    "summary": "",
+    "source": "DOJ"
+  },
+  {
+    "title": "Gun-Toting Felon Who Ran from Officers  Sentenced to Federal Prison",
+    "link": "https://www.justice.gov/usao-ndia/pr/gun-toting-felon-who-ran-officers-sentenced-federal-prison",
+    "pubDate": "Fri, 30 Oct 2026 12:00:00 +0000",
+    "summary": "",
+    "source": "DOJ"
+  },
+  {
+    "title": "U.S. Attorney Employees Recognized  for Superior Performance",
+    "link": "https://www.justice.gov/usao-ndia/pr/us-attorney-employees-recognized-superior-performance",
+    "pubDate": "Fri, 30 Oct 2026 12:00:00 +0000",
+    "summary": "",
+    "source": "DOJ"
+  },
+  {
+    "title": "Kansas man pleads guilty to illegal gun possession",
+    "link": "https://www.justice.gov/usao-ks/pr/kansas-man-pleads-guilty-illegal-gun-possession",
+    "pubDate": "Fri, 30 Oct 2026 12:00:00 +0000",
+    "summary": "A Kansas man pleaded guilty to illegally possessing a firearm while facing criminal charges.&nbsp;",
+    "source": "DOJ"
+  },
+  {
+    "title": "DOJ releases annual report on efforts to combat elder fraud & abuse",
+    "link": "https://www.justice.gov/usao-ks/pr/doj-releases-annual-report-efforts-combat-elder-fraud-abuse",
+    "pubDate": "Fri, 30 Oct 2026 12:00:00 +0000",
+    "summary": "This week the Department of Justice’s Civil Division released its Annual Report to Congress on its efforts to Combat Elder Fraud and Abuse: Office of Public Affairs | Justice Department Releases Eighth Annual Elder Justice Report | United States Department of Justice.",
+    "source": "DOJ"
+  },
+  {
+    "title": "USAO-KS & ATF announces results of Operation Iron Sights",
+    "link": "https://www.justice.gov/usao-ks/pr/usao-ks-atf-announces-results-operation-iron-sights",
+    "pubDate": "Fri, 30 Oct 2026 12:00:00 +0000",
+    "summary": "The U.S. Attorney’s Office for the District of Kansas (USAO-KS) and the Bureau of Alcohol Tobacco, Firearms and Explosives (ATF) announce today the results of Operation Iron Sights, a violent crime initiative conducted in the Wichita-Sedgwick County area from July 13 - September 16, 2026.",
+    "source": "DOJ"
+  },
+  {
+    "title": "Byrd Gang Members  Sentenced to Life Imprisonment for 2017 Double Homicide Committed Outside Edna Karr High School Basketball Game",
+    "link": "https://www.justice.gov/usao-edla/pr/byrd-gang-members-sentenced-life-imprisonment-2017-double-homicide-committed-outside",
+    "pubDate": "Fri, 30 Oct 2026 12:00:00 +0000",
+    "summary": "<strong>NEW ORLEANS –&nbsp;</strong>U.S. Attorney David I. Courcelle announced that&nbsp;<strong>TERRAN WILLIAMS, a/k/a “Funky” (“WILLIAMS,”) TYRONE BOVIA, a/k/a “Sixx” (“BOVIA,</strong>”) and <strong>JAVONTA DOLEMAN, a/k/a “Dutt” (“DOLEMAN,”) </strong>all from New Orleans,<strong>&nbsp;</strong>were sentenced to life imprisonment by United States District Judge Jane Triche Milazzo.&nbsp;",
+    "source": "DOJ"
+  },
+  {
+    "title": "Three Indicted for Violations of the Federal Controlled Substances Act Resulting in Death",
+    "link": "https://www.justice.gov/usao-edla/pr/three-indicted-violations-federal-controlled-substances-act-resulting-death",
+    "pubDate": "Fri, 30 Oct 2026 12:00:00 +0000",
+    "summary": "<strong>NEW ORLEANS, LOUISIANA</strong> –United States Attorney David I. Courcelle announced that <strong>IVORY CARTER (“CARTER”)&nbsp;</strong>age 44<strong>, DONNISHA BROWN (“BROWN”)&nbsp;</strong>age 42<strong>, AND CHRISTOPHER LEHMANN (“LEHMANN”)&nbsp;</strong>age 30, were charged in a recently unsealed four-count indictment on October 1, 2026.",
+    "source": "DOJ"
+  },
+  {
+    "title": "Honduran Illegal Alien Guilty of Violation of the Federal Gun Control Act",
+    "link": "https://www.justice.gov/usao-edla/pr/honduran-illegal-alien-guilty-violation-federal-gun-control-act",
+    "pubDate": "Fri, 30 Oct 2026 12:00:00 +0000",
+    "summary": "<strong>NEW ORLEANS</strong>, <strong>LOUISIANA –&nbsp;</strong>On October 22, 2026,&nbsp;<strong>ERLIN JOVANY GAMEZ MALDONADO (\"GAMEZ MALDONADO\")</strong>, age 29, a native of Honduras, pled guilty to being an illegal alien in possession of a firearm, in violation of Title 18, United States Code, Sections 922(g)(5)(A) and 924(a)(8) announced&nbsp;United States Attorney David I. Courcelle.&nbsp;",
+    "source": "DOJ"
+  },
+  {
+    "title": "Laplace Resident Charged With Mail Fraud",
+    "link": "https://www.justice.gov/usao-edla/pr/laplace-resident-charged-mail-fraud",
+    "pubDate": "Fri, 30 Oct 2026 12:00:00 +0000",
+    "summary": "<strong>NEW ORLEANS –&nbsp;JEWELL JACKSON</strong>, age 39, of LaPlace, Louisiana was charged with mail fraud in a bill of information filed on October 28, 2026 in the Eastern District of Louisiana, announced U.S. Attorney David I. Courcelle.&nbsp;",
+    "source": "DOJ"
+  },
+  {
+    "title": "Jennings Man Sentenced to Six Years in Federal Prison for Conspiracy to Distribute Fentanyl",
+    "link": "https://www.justice.gov/usao-wdla/pr/jennings-man-sentenced-six-years-federal-prison-conspiracy-distribute-fentanyl",
+    "pubDate": "Fri, 30 Oct 2026 12:00:00 +0000",
+    "summary": "",
+    "source": "DOJ"
+  },
+  {
+    "title": "Augusta Woman Pleads Guilty to Social Security Fraud",
+    "link": "https://www.justice.gov/usao-me/pr/augusta-woman-pleads-guilty-social-security-fraud",
+    "pubDate": "Fri, 30 Oct 2026 12:00:00 +0000",
+    "summary": "According to court records, from about October 2018 to April 2022, <strong>Deborah Oldis</strong>, 63, intentionally concealed and failed to disclose her ownership of assets, including bonds, stocks, and a personal bank account.&nbsp;",
+    "source": "DOJ"
+  },
+  {
+    "title": "Kingfield Woman Sentenced for Possessing Child Pornography",
+    "link": "https://www.justice.gov/usao-me/pr/kingfield-woman-sentenced-possessing-child-pornography",
+    "pubDate": "Fri, 30 Oct 2026 12:00:00 +0000",
+    "summary": "U.S. District Judge Stacey D. Neumann sentenced <strong>Anna LaRochelle</strong>, 36, to 10 years in prison to be followed by 20 years of supervised release.&nbsp;",
+    "source": "DOJ"
+  },
+  {
+    "title": "U.S. Attorney Appoints Election Officers to Respond to Election Fraud or Voting Rights Complaints in Maine",
+    "link": "https://www.justice.gov/usao-me/pr/us-attorney-appoints-election-officers-respond-election-fraud-or-voting-rights",
+    "pubDate": "Fri, 30 Oct 2026 12:00:00 +0000",
+    "summary": "U.S. Attorney Andrew B. Benson announced today that Assistant U.S. Attorneys John Osborn and Andrew McCormack will lead his office’s efforts in connection with the Justice Department’s nationwide Election Day Program for the upcoming November 3 general election.&nbsp;",
+    "source": "DOJ"
+  },
+  {
+    "title": "Harford County Registered Sex Offender Indicted on Child Sex Crimes",
+    "link": "https://www.justice.gov/usao-md/pr/harford-county-registered-sex-offender-indicted-child-sex-crimes",
+    "pubDate": "Fri, 30 Oct 2026 12:00:00 +0000",
+    "summary": "<strong>Baltimore, Maryland</strong> –&nbsp;The U.S. Attorney’s Office announced, today, that a&nbsp;federal grand jury indicted a Harford County man in connection with child sexual abuse charges spanning across three states. Jason Alex Candelaria, 34, of Darlington, Maryland, is charged with production of child sexual abuse material (CSAM), online coercion and enticement, and possession of CSAM.&nbsp;&nbsp;",
+    "source": "DOJ"
+  },
+  {
+    "title": "U.S. Attorney Jerome Gorgon Announces Election Day Program",
+    "link": "https://www.justice.gov/usao-edmi/pr/us-attorney-jerome-gorgon-announces-election-day-program",
+    "pubDate": "Fri, 30 Oct 2026 12:00:00 +0000",
+    "summary": "",
+    "source": "DOJ"
+  },
+  {
+    "title": "Chesterfield Township Man Charged With  Threatening to Kill FBI Director and His Associate",
+    "link": "https://www.justice.gov/usao-edmi/pr/chesterfield-township-man-charged-threatening-kill-fbi-director-and-his-associate",
+    "pubDate": "Fri, 30 Oct 2026 12:00:00 +0000",
+    "summary": "",
+    "source": "DOJ"
+  },
+  {
+    "title": "U.S. Attorney Announces Charges Against Four Additional Defendants in Sprawling Conspiracy Terrorizing Jewish Community, University of Michigan Officials",
+    "link": "https://www.justice.gov/usao-edmi/pr/us-attorney-announces-charges-against-four-additional-defendants-sprawling-conspiracy",
+    "pubDate": "Fri, 30 Oct 2026 12:00:00 +0000",
+    "summary": "",
+    "source": "DOJ"
+  },
+  {
+    "title": "U.S. Attorney General Honors Three West Michigan Prosecutors",
+    "link": "https://www.justice.gov/usao-wdmi/pr/2026_1030_WDMI_Directors_Award_PR",
+    "pubDate": "Fri, 30 Oct 2026 12:00:00 +0000",
+    "summary": "<em>Alexis Sanford, Theodore Greeley, and Jeanne Long Received Awards for Successfully Prosecuting a Child Murder Case</em>",
+    "source": "DOJ"
+  },
+  {
+    "title": "Brothers Sentenced to Total of 366 Months’ Imprisonment for $8 Million Armed Robbery in Cryptocurrency Kidnapping Case",
+    "link": "https://www.justice.gov/usao-mn/pr/brothers-sentenced-total-326-months-imprisonment-8-million-armed-robbery-cryptocurrency",
+    "pubDate": "Fri, 30 Oct 2026 12:00:00 +0000",
+    "summary": "",
+    "source": "DOJ"
+  },
+  {
+    "title": "Federal Law Enforcement Initiative Targets Sex Offender Registration Violations and Child Exploitation",
+    "link": "https://www.justice.gov/usao-wdmo/pr/federal-law-enforcement-initiative-targets-sex-offender-registration-violations-and",
+    "pubDate": "Fri, 30 Oct 2026 12:00:00 +0000",
+    "summary": "The U.S. Attorney for the Western District of Missouri announced today that, as part of its ongoing Project Safe Childhood initiative, federal, state, and local law enforcement partners have conducted a focused enforcement effort targeting individuals who fail to comply with federal sex offender registration requirements and those involved in child exploitation.&nbsp;",
+    "source": "DOJ"
+  },
+  {
+    "title": "Lawful Permanent Resident from Canada Charged with Falsely Claiming to be a United States Citizen to Register to Vote",
+    "link": "https://www.justice.gov/usao-wdmo/pr/lawful-permanent-resident-canada-charged-falsely-claiming-be-united-states-citizen",
+    "pubDate": "Fri, 30 Oct 2026 12:00:00 +0000",
+    "summary": "Christopher Doucet, 68, a lawful permanent resident from Canada was arrested after being charged with falsely claiming to be a United States citizen in order to register to vote.",
+    "source": "DOJ"
+  },
+  {
+    "title": "Scott Twito sworn in as Interim U.S. Attorney for the District of Montana",
+    "link": "https://www.justice.gov/usao-mt/pr/scott-twito-sworn-interim-us-attorney-district-montana-0",
+    "pubDate": "Fri, 30 Oct 2026 12:00:00 +0000",
+    "summary": "Scott Twito, who served as Yellowstone County Attorney for 16 years, was sworn in today as Interim U.S. Attorney for the District of Montana by Chief U.S. District Judge Brian M. Morris.&nbsp;",
+    "source": "DOJ"
+  },
+  {
+    "title": "Washington man sentenced to over three years in prison for trafficking meth to Billings",
+    "link": "https://www.justice.gov/usao-mt/pr/washington-man-sentenced-over-three-years-prison-trafficking-meth-billings",
+    "pubDate": "Fri, 30 Oct 2026 12:00:00 +0000",
+    "summary": "A Washington man who helped traffic meth into Billings was sentenced Thursday to three years and five months in prison, followed by four years of supervised release.",
+    "source": "DOJ"
+  },
+  {
+    "title": "Belgrade man sentenced to more than 5 years prison for trafficking meth in Bozeman",
+    "link": "https://www.justice.gov/usao-mt/pr/belgrade-man-sentenced-more-5-years-prison-trafficking-meth-bozeman",
+    "pubDate": "Fri, 30 Oct 2026 12:00:00 +0000",
+    "summary": "A Belgrade man who was trafficking meth in Bozeman was sentenced Thursday to five years and 10 months in prison, followed by three years of supervised release.",
+    "source": "DOJ"
+  },
+  {
+    "title": "Fifth Alien Charged for Illegally Voting in Nevada",
+    "link": "https://www.justice.gov/usao-nv/pr/fifth-alien-charged-illegally-voting-nevada",
+    "pubDate": "Fri, 30 Oct 2026 12:00:00 +0000",
+    "summary": "<strong>LAS VEGAS</strong> – An Argentine national was charged today for illegally voting in the 2024 general election in Clark County, Nevada.&nbsp;",
+    "source": "DOJ"
+  },
+  {
+    "title": "Former Detective Indicted for Smuggling an Individual Into the United States",
+    "link": "https://www.justice.gov/usao-nv/pr/former-detective-indicted-smuggling-individual-united-states",
+    "pubDate": "Fri, 30 Oct 2026 12:00:00 +0000",
+    "summary": "<strong>LAS VEGAS –&nbsp;</strong>A grand jury in Las Vegas returned a four-count indictment charging a former Henderson Police Department detective with smuggling an individual into the United States.",
+    "source": "DOJ"
+  },
+  {
+    "title": "Dominican National Who Led Methuen-Based Drug Trafficking Organization Sentenced to More than 8 Years in Federal Prison",
+    "link": "https://www.justice.gov/usao-nh/pr/dominican-national-who-led-methuen-based-drug-trafficking-organization-sentenced-more-8",
+    "pubDate": "Fri, 30 Oct 2026 12:00:00 +0000",
+    "summary": "",
+    "source": "DOJ"
+  },
+  {
+    "title": "Former College Consulting and Financial Planning Business Owner Admits to Defrauding 65 Victims in $9.7 Million Ponzi Scheme",
+    "link": "https://www.justice.gov/usao-nj/pr/former-college-consulting-and-financial-planning-business-owner-admits-defrauding-65",
+    "pubDate": "Fri, 30 Oct 2026 12:00:00 +0000",
+    "summary": "A former college and financial planner who operated a Somerset County-based business admitted to running a Ponzi scheme that defrauded victims out of more than $9.7 million over a period of more than 10 years.",
+    "source": "DOJ"
+  },
+  {
+    "title": "Pennsylvania Man Admits to Armed Bank Robbery",
+    "link": "https://www.justice.gov/usao-nj/pr/pennsylvania-man-admits-armed-bank-robbery",
+    "pubDate": "Fri, 30 Oct 2026 12:00:00 +0000",
+    "summary": "A Pennsylvania man admitted to committing an armed bank robbery in Voorhees, New Jersey.",
+    "source": "DOJ"
+  },
+  {
+    "title": "Top Ecuadorian Leader of Los Choneros, a Violent Foreign Terrorist Organization, Extradited to the United States to Face International Narcotics and Firearm Charges Following Homeland Security Task Force Initiative",
+    "link": "https://www.justice.gov/usao-edny/pr/top-ecuadorian-leader-los-choneros-violent-foreign-terrorist-organization-extradited",
+    "pubDate": "Fri, 30 Oct 2026 12:00:00 +0000",
+    "summary": "Francisco Manuel Bermúdez Cagua, also known as “Churrón,” will be arraigned in federal court in Brooklyn this afternoon before United States Magistrate Judge Peggy Kuo on a superseding indictment charging him with international cocaine distribution conspiracy, international cocaine distribution, and use of firearms in furtherance of drug trafficking.&nbsp; Bermúdez Cagua is a top leader of Los Choneros, a Foreign Terrorist Organization (FTO) based in Ecuador that is responsible for significant drug trafficking into the United States, firearms trafficking from the United States and acts of extreme violence.&nbsp; He was extradited from Ecuador to the Eastern District of New York on October 29, 2026.",
+    "source": "DOJ"
+  },
+  {
+    "title": "Kalder CEO Sentenced To 25 Months In Prison",
+    "link": "https://www.justice.gov/usao-sdny/pr/kalder-ceo-sentenced-25-months-prison",
+    "pubDate": "Fri, 30 Oct 2026 12:00:00 +0000",
+    "summary": "United States Attorney for the Southern District of New York, Jamie McDonald, announced today that GÖKÇE GÜVEN, the founder and former Chief Executive Officer of Kalder Inc. (“Kalder”), was sentenced to 25 months in prison for committing securities fraud in connection with&nbsp;a scheme to defraud the investors in Kalder, a technology startup before U.S. District Judge Lewis A. Kaplan.&nbsp;&nbsp;",
+    "source": "DOJ"
+  },
+  {
+    "title": "Bucyrus Business Owner Pleads Guilty to Role in Obtaining Nearly $900,000 in Pandemic Funds",
+    "link": "https://www.justice.gov/usao-ndoh/pr/bucyrus-business-owner-pleads-guilty-role-obtaining-nearly-900000-pandemic-funds",
+    "pubDate": "Fri, 30 Oct 2026 12:00:00 +0000",
+    "summary": "A 56-year-old man has pleaded guilty in federal court to devising a scheme to obtain pandemic government stimulus funds meant to assist small businesses, which he instead used for his personal benefit. The defendant also used role as church board member and treasurer to falsely obtain funds.&nbsp;&nbsp;",
+    "source": "DOJ"
+  },
+  {
+    "title": "2 Dayton men plead guilty to drug & gun charges as part of ‘Operation Fly City’",
+    "link": "https://www.justice.gov/usao-sdoh/pr/2-dayton-men-plead-guilty-drug-gun-charges-part-operation-fly-city",
+    "pubDate": "Fri, 30 Oct 2026 12:00:00 +0000",
+    "summary": "DAYTON, Ohio – Two of the 47 defendants charged this summer as part of&nbsp;the&nbsp;<a href=\"https://www.justice.gov/usao-sdoh/pr/47-defendants-charged-part-operation-fly-city-homeland-security-task-force-enforcement\">“Operation Fly City” Homeland Security Task Force enforcement operation</a> pleaded guilty in U.S. District Court today to drug crimes punishable by at least 10 years and up to life in prison.",
+    "source": "DOJ"
+  },
+  {
+    "title": "Luzerne County Man Sentenced to 108 Months in Federal Prison for Distribution of Child Pornography",
+    "link": "https://www.justice.gov/usao-mdpa/pr/luzerne-county-man-sentenced-108-months-federal-prison-distribution-child-pornography",
+    "pubDate": "Fri, 30 Oct 2026 12:00:00 +0000",
+    "summary": "",
+    "source": "DOJ"
+  },
+  {
+    "title": "Chinese Nationals Sentenced for Conspiracy to Defraud Elderly Victims",
+    "link": "https://www.justice.gov/usao-mdpa/pr/chinese-nationals-sentenced-conspiracy-defraud-elderly-victims",
+    "pubDate": "Fri, 30 Oct 2026 12:00:00 +0000",
+    "summary": "",
+    "source": "DOJ"
+  },
+  {
+    "title": "Jamaican National Extradited to United States on Fraud and Money Laundering Charges",
+    "link": "https://www.justice.gov/usao-mdpa/pr/jamaican-national-extradited-united-states-fraud-and-money-laundering-charges",
+    "pubDate": "Fri, 30 Oct 2026 12:00:00 +0000",
+    "summary": "",
+    "source": "DOJ"
+  },
+  {
+    "title": "Saluda Water Plant Operator Pleads Guilty to Violating the Clean Water Act",
+    "link": "https://www.justice.gov/usao-sc/pr/saluda-water-plant-operator-pleads-guilty-violating-clean-water-act",
+    "pubDate": "Fri, 30 Oct 2026 12:00:00 +0000",
+    "summary": "<strong>COLUMBIA, S.C.</strong>&nbsp;— John Lorick,&nbsp;45, of&nbsp;Ninety-Six, has pleaded guilty to violating a permit issued under the Clean Water Act.&nbsp;",
+    "source": "DOJ"
+  },
+  {
+    "title": "Kershaw County Man Sentenced to 15 Years in Federal Prison for Drug Possession",
+    "link": "https://www.justice.gov/usao-sc/pr/kershaw-county-sentenced-15-years-federal-prison-drug-possession",
+    "pubDate": "Fri, 30 Oct 2026 12:00:00 +0000",
+    "summary": "<strong>COLUMBIA, S.C.</strong>&nbsp;— Van Lydell Starling, 48, of Lugoff, has been sentenced to 15 years in federal prison for possession with the intent to distribute crack cocaine.",
+    "source": "DOJ"
+  },
+  {
+    "title": "Fort Thompson Man Found Guilty of Assaulting a Federal Officer",
+    "link": "https://www.justice.gov/usao-sd/pr/fort-thompson-man-found-guilty-assaulting-federal-officer",
+    "pubDate": "Fri, 30 Oct 2026 12:00:00 +0000",
+    "summary": "United States Attorney Ron Parsons&nbsp;announced that a jury has convicted Patrick Wind a/k/a Patrick Azure, age 34, of Fort Thompson, South Dakota, of Assaulting, Resisting, and Impeding a Federal Officer following a two-day jury trial in federal district court in Pierre, South Dakota.&nbsp; The verdict was returned on October 29, 2026.",
+    "source": "DOJ"
+  },
+  {
+    "title": "Sioux Falls Man Sentenced to 10 Years in Federal Prison for Possession of Child Pornography",
+    "link": "https://www.justice.gov/usao-sd/pr/sioux-falls-man-sentenced-10-years-federal-prison-possession-child-pornography",
+    "pubDate": "Fri, 30 Oct 2026 12:00:00 +0000",
+    "summary": "United States Attorney Ron Parsons announced today that United States District Chief Judge Roberto A. Lange has sentenced a Sioux Falls, South Dakota, man convicted of Possession of Child Pornography.&nbsp; The sentencing took place on October 26, 2026.",
+    "source": "DOJ"
+  },
+  {
+    "title": "Two Aliens Charged With Illegal Voting",
+    "link": "https://www.justice.gov/usao-edtn/pr/two-aliens-charged-illegal-voting",
+    "pubDate": "Fri, 30 Oct 2026 12:00:00 +0000",
+    "summary": "",
+    "source": "DOJ"
+  },
+  {
+    "title": "Sevier County Man Charged Federally With Passport Fraud, Identity Theft, And Voting By An Alien",
+    "link": "https://www.justice.gov/usao-edtn/pr/sevier-county-man-charged-federally-passport-fraud-identity-theft-and-voting-alien",
+    "pubDate": "Fri, 30 Oct 2026 12:00:00 +0000",
+    "summary": "",
+    "source": "DOJ"
+  },
+  {
+    "title": "Three Aliens in Middle Tennessee Charged With Illegal Voting in Federal Elections",
+    "link": "https://www.justice.gov/usao-mdtn/pr/three-aliens-middle-tennessee-charged-illegal-voting-federal-elections",
+    "pubDate": "Fri, 30 Oct 2026 12:00:00 +0000",
+    "summary": "",
+    "source": "DOJ"
+  },
+  {
+    "title": "U.S. Attorney Aaron Reitz issues statement regarding Harris County DA indicting ICE agent",
+    "link": "https://www.justice.gov/usao-sdtx/pr/us-attorney-aaron-reitz-issues-statement-regarding-harris-county-da-indicting-ice",
+    "pubDate": "Fri, 30 Oct 2026 12:00:00 +0000",
+    "summary": "Disappointed in his inability to swiftly bring charges in the tragic Salgado shooting in July, the Harris County District Attorney now appears determined to put a different federal agent’s scalp on the wall. This time, he’s pursuing what looks like a political prosecution of an ICE agent for doing his job—exactly what his allies have been agitating for",
+    "source": "DOJ"
+  },
+  {
+    "title": "“Ghost preparer” sentenced for role in tax return scheme",
+    "link": "https://www.justice.gov/usao-sdtx/pr/ghost-preparer-sentenced-role-tax-return-scheme",
+    "pubDate": "Fri, 30 Oct 2026 12:00:00 +0000",
+    "summary": "A local woman has been ordered to federal prison for aiding or assisting in the preparation of false tax returns",
+    "source": "DOJ"
+  },
+  {
+    "title": "Five foreigners charged with election-integrity crimes",
+    "link": "https://www.justice.gov/usao-sdtx/pr/five-foreigners-charged-election-integrity-crimes",
+    "pubDate": "Fri, 30 Oct 2026 12:00:00 +0000",
+    "summary": "Five non-U.S. citizens, including one illegal alien, from the countries of Trinidad and Tobago, Nigeria, and Mexico, have been charged for unlawfully voting in federal elections, lying on immigration documents, or falsely claiming American citizenship",
+    "source": "DOJ"
+  },
+  {
+    "title": "U.S. Attorney’s Office Exceeds 250 New Immigration Cases for Another Week in Western District of Texas",
+    "link": "https://www.justice.gov/usao-wdtx/pr/us-attorneys-office-exceeds-250-new-immigration-cases-another-week-western-district",
+    "pubDate": "Fri, 30 Oct 2026 12:00:00 +0000",
+    "summary": "Federal prosecutors in the Western District of Texas filed 256 new immigration and immigration-related criminal cases from Oct. 23 through Oct. 30",
+    "source": "DOJ"
+  },
+  {
+    "title": "U.S. Attorney Announces Influx of Federal Gun Crime Prosecutions in San Antonio",
+    "link": "https://www.justice.gov/usao-wdtx/pr/us-attorney-announces-influx-federal-gun-crime-prosecutions-san-antonio",
+    "pubDate": "Fri, 30 Oct 2026 12:00:00 +0000",
+    "summary": "U.S. Attorney for the Western District of Texas, Justin R. Simmons, announced that Assistant U.S. Attorneys in San Antonio have filed approximately 30 federal cases against defendants for gun-related crimes in recent months.",
+    "source": "DOJ"
+  },
+  {
+    "title": "Madison Man Sentenced to More Than 2 Years for Illegally Possessing Firearm and Ammunition",
+    "link": "https://www.justice.gov/usao-wdwi/pr/madison-man-sentenced-more-2-years-illegally-possessing-firearm-and-ammunition",
+    "pubDate": "Fri, 30 Oct 2026 12:00:00 +0000",
+    "summary": "",
+    "source": "DOJ"
+  },
+  {
+    "title": "Florida Man Sentenced To 70 Months For Counterfeit Treasury Check Scheme Targeting Wyoming Bank",
+    "link": "https://www.justice.gov/usao-wy/pr/florida-man-sentenced-70-months-counterfeit-treasury-check-scheme-targeting-wyoming-bank",
+    "pubDate": "Fri, 30 Oct 2026 12:00:00 +0000",
+    "summary": "CHEYENNE, Wyo. – <strong>Daniel Keith McDougal</strong>, 37, of Orlando, Florida, was sentenced to 70 months in federal prison followed by five years of supervised release for leading a multi-state fraud scheme that targeted a Wyoming financial institution. He was also ordered to pay $27,000 in restitution. The sentence, handed down by U.S. District Judge Alan B. Johnson, follows McDougal’s conviction by a federal jury in August 2026.&nbsp;",
+    "source": "DOJ"
+  },
+  {
+    "title": "Indianapolis Man Agrees to Plead Guilty in SNAP Fraud and Card Skimming Scheme",
+    "link": "https://www.justice.gov/usao-sdin/pr/indianapolis-man-agrees-plead-guilty-snap-fraud-and-card-skimming-scheme",
+    "pubDate": "Fri, 30 Oct 2026 12:00:00 +0000",
+    "summary": "",
+    "source": "DOJ"
+  },
+  {
+    "title": "Ecomax, Inc.",
+    "link": "https://www.sec.gov/files/litigation/admin/2026/34-106767.pdf",
+    "pubDate": "Thu, 29 Oct 2026 20:35:21 -0400",
+    "summary": "Ecomax, Inc.",
+    "source": "SEC Administrative"
+  },
+  {
     "title": "Newell Brands, Inc. and Michael B. Polk",
     "link": "https://www.sec.gov/files/litigation/admin/2026/34-106773.pdf",
     "pubDate": "Thu, 29 Oct 2026 17:05:26 -0400",
@@ -620,6 +1306,48 @@
     "link": "https://www.justice.gov/usao-wdwi/pr/two-canadian-citizens-charged-illegal-voting-us-elections",
     "pubDate": "Thu, 29 Oct 2026 12:00:00 +0000",
     "summary": "",
+    "source": "DOJ"
+  },
+  {
+    "title": "Three Sentenced to Prison for Interstate Stolen Vehicle Trafficking and Illegal Firearms Possession",
+    "link": "https://www.justice.gov/usao-sdal/pr/three-sentenced-prison-interstate-stolen-vehicle-trafficking-and-illegal-firearms",
+    "pubDate": "Thu, 29 Oct 2026 12:00:00 +0000",
+    "summary": "MOBILE, AL – Three defendants were sentenced to 70 months, 63 months, and 46 months in prison, respectively, for participating in an interstate stolen vehicle-trafficking conspiracy and illegally possessing firearms.",
+    "source": "DOJ"
+  },
+  {
+    "title": "Mississippi Delta Man Sentenced for Federal Drug & Gun Charges",
+    "link": "https://www.justice.gov/usao-ndms/pr/mississippi-delta-man-sentenced-federal-drug-gun-charges",
+    "pubDate": "Thu, 29 Oct 2026 12:00:00 +0000",
+    "summary": "U.S. Attorney Scott Leary and Greenville Police Chief Marcus Turner announced the sentence of Malcolm Patterson of Leland. District Court Judge James D. Maxwell sentenced him to 120 months with three years of supervised release. Patterson had previously pleaded guilty to possession of a controlled substance with intent to distribute as well as possession of a firearm by a convicted felon.&nbsp;&nbsp;",
+    "source": "DOJ"
+  },
+  {
+    "title": "McMinnville Man Pleads Guilty in Fentanyl Conspiracy That Caused One Death and Six Overdoses",
+    "link": "https://www.justice.gov/usao-or/pr/mcminnville-man-pleads-guilty-fentanyl-conspiracy-caused-one-death-and-six-overdoses",
+    "pubDate": "Thu, 29 Oct 2026 12:00:00 +0000",
+    "summary": "U.S. Attorney for the District of Oregon Scott Bradford announced today that <strong>John Kyle Donnahoo</strong>, 32, of McMinnville, has pleaded guilty to <strong>Conspiracy to Distribute and Possess with Intent to Distribute a Schedule II Controlled Substance</strong>. The charge stems from a February 2023 incident in Yamhill County in which a fentanyl‑laced substance caused the overdose death of one person and serious injury to six others.",
+    "source": "DOJ"
+  },
+  {
+    "title": "Defendant Sentenced to 45 years in Prison for Federal Crimes Related to the Murder of Puerto Rico Police Sergeant Eliezer Ramos Vélez in Homeland Security Task Force Prosecution",
+    "link": "https://www.justice.gov/usao-pr/pr/defendant-sentenced-45-years-prison-federal-crimes-related-murder-puerto-rico-police-0",
+    "pubDate": "Thu, 29 Oct 2026 12:00:00 +0000",
+    "summary": "SAN JUAN, Puerto Rico – Today, United States District Court Judge Judge María Antongiorgi-Jordán sentenced Luis N. Isaac-Sánchez, a/k/a “Chimbo”, “CDobleta”, “Dobleta” to serve a total sentence of 540 months of imprisonment (45-years) followed by a supervised release term of 10 years for drug trafficking and firearm violations, announced Héctor Ramírez-Carbó, Acting United States Attorney for the District of Puerto Rico. The Federal Bureau of Investigation investigated the case. Isaac-Sánchez pleaded guilty on June 10, 2026.",
+    "source": "DOJ"
+  },
+  {
+    "title": "Chinese national sentenced to 12 years in prison for narcotics trafficking, money laundering, and material support to terrorism",
+    "link": "https://www.justice.gov/usao-edva/pr/chinese-national-sentenced-12-years-prison-narcotics-trafficking-money-laundering-and",
+    "pubDate": "Thu, 29 Oct 2026 12:00:00 +0000",
+    "summary": "Wenshen Xu, 52, a Honduras-based Chinese national extradited from Guatemala, was sentenced today to 12 years in prison and a $22 million money judgement for narco-trafficking, money laundering, and support of terrorism.",
+    "source": "DOJ"
+  },
+  {
+    "title": "Syrian man sentenced for wide-ranging hacking conspiracy conducted on behalf of the Bashar Al Assad regime",
+    "link": "https://www.justice.gov/usao-edva/pr/syrian-man-sentenced-wide-ranging-hacking-conspiracy-conducted-behalf-bashar-al-assad",
+    "pubDate": "Thu, 29 Oct 2026 12:00:00 +0000",
+    "summary": "Ahmad Umar Agha, of Syria, was sentenced to three years and six months in prison for a wide-ranging hacking conspiracy conducted on behalf of the Bashar Al Assad regime.",
     "source": "DOJ"
   },
   {
